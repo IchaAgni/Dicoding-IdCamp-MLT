@@ -43,7 +43,7 @@ Untuk menjawab pertanyaan tersebut, dibuat "Predictive Modelling" dengan tujuan 
 ### Solution statements
 Solusi yang dapat dilakukan untuk memenuhi goals proyek ini diantaranya sebagai berikut:
 - Membuat 2 model Machine Learning yaitu dengan algoritma LinearRegression dan RandomForest.
-* Konsep dasar dari algoritma Linear Regression adalah melakukan prediksi nilai y berdasarkan nilai x yang diketahui, sambil mencari nilai m dan b sehingga kesalahan (error) dapat diminimalkan sebanyak mungkin [[Simple Linear Regression di Python]](https://medium.com/@adiptamartulandi/belajar-machine-learning-simple-linear-regression-di-python-e82972695eaf)
+   * Konsep dasar dari algoritma Linear Regression adalah melakukan prediksi nilai y berdasarkan nilai x yang diketahui, sambil mencari nilai m dan b sehingga kesalahan (error) dapat diminimalkan sebanyak mungkin [[Simple Linear Regression di Python]](https://medium.com/@adiptamartulandi/belajar-machine-learning-simple-linear-regression-di-python-e82972695eaf)
 
  ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/rumus.png).
  
