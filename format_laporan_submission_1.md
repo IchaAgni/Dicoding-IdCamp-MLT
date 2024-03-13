@@ -53,6 +53,7 @@ Metode ini memiliki kelebihan ketika digunakan untuk memprediksi nilai yang ada 
    * Konsep dari algoritma RandomForest yaitu model prediksi yang terdiri dari beberapa model dan bekerja secara bersama-sama. Kelebihan dari metode ini yakni jika dataset berjumlah banyak maka RandomForest akan bekerja secara efisien.
 
 ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/tree.png).
+Tujuan yang ingin dicapai adalah estimasi gaji, dan sebagai yang kita ketahui, estimasi gaji merupakan variabel yang bersifat kontinu. Dalam konteks prediksi variabel kontinu, ini dapat dianggap sebagai masalah regresi. Dalam hal regresi seperti ini, metrik Mean Squared Error (MSE) akan digunakan. Secara keseluruhan, MSE mengukur sejauh mana prediksi mendekati nilai aktual. Oleh karena itu, setiap model akan dievaluasi, dan kemudian algoritma yang memberikan nilai metrik terbaik akan dipilih.
  
 ## Data Understanding
 Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
