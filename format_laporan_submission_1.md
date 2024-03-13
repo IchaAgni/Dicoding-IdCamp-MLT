@@ -24,7 +24,6 @@ Referensi yang di gunakan :
 
 
 ## Business Understanding
-
 Rekrutmen adalah proses mencari dan menyeleksi calon karyawan untuk mengisi posisi atau jabatan tertentu. Kunci utama menciptakan Sumber Daya Manusia (SDM) yang profesional terletak pada proses rekrutmen, seleksi, training, dan development calon karyawan. Tidaklah mudah mencari karyawan yang berkualitas. Proses rekrutmen ini penting dalam menentukan baik tidaknya pelamar yang melamar pekerjaan pada suatu perusahaan[Rekrutmen](https://majoo.id/solusi/detail/rekrutmen-adalah#:~:text=Rekrutmen%20adalah%20proses%20mencari%20dan,mudah%20mencari%20karyawan%20yang%20berkualitas)
 
 Faktor yang dapat menjadi penentu efektivitas seorang karyawan adalah pengalaman kerja; semakin besar pengalamannya, semakin tinggi pula kualitasnya. Dikutip dari salah satu Jurnal Ekonomi Pembangunan, Manajemen dan Bisnis, Akuntansi “Pengalaman kerja karyawan berhubungan erat dengan kinerja”.Pengalaman kerja akan membantu kelancaran didalam menyelesaikan pekerjaan dalam suatu perusahaan[Dampak Masa Kerja, Pengalaman Kerja, Kemampuan Kerja Terhadap Kinerja Karyawan](https://e-journal.upr.ac.id/index.php/jemba/article/download/2986/2501)
@@ -45,6 +44,9 @@ Untuk menjawab pertanyaan tersebut, dibuat "Predictive Modelling" dengan tujuan 
     - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
     - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
 
+Konsep dasar dari algoritma Linear Regression adalah melakukan prediksi nilai y berdasarkan nilai x yang diketahui, sambil mencari nilai m dan b sehingga kesalahan (error) dapat diminimalkan sebanyak mungkin[Simple Linear Regression di Python](https://medium.com/@adiptamartulandi/belajar-machine-learning-simple-linear-regression-di-python-e82972695eaf)
+ ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/rumus.png)
+ 
 ## Data Understanding
 Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
 
