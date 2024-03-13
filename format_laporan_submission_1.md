@@ -51,7 +51,7 @@ Metode ini memiliki kelebihan ketika digunakan untuk memprediksi nilai yang ada 
 
 ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/LinearRegression.png)
 
-  * Konsep dari algoritma RandomForest yaitu model prediksi yang terdiri dari beberapa model dan bekerja secara bersama-sama. Kelebihan dari metode ini yakni jika dataset berjumlah banyak maka RandomForest akan bekerja secara efisien.
+   * Konsep dari algoritma RandomForest yaitu model prediksi yang terdiri dari beberapa model dan bekerja secara bersama-sama. Kelebihan dari metode ini yakni jika dataset berjumlah banyak maka RandomForest akan bekerja secara efisien.
 
 ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/tree.png).
  
