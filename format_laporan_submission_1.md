@@ -83,7 +83,7 @@ Berdasarkan visualisasi heatmap di atas dapat disimpulkan bahwa:
 Berikut merupakan tahapan-tahapan dalam Data Preparation:
 - Data yang ada akan dipisah menjadi dua bagian, yaitu data latih dan data uji, dengan proporsi 80:10. Proses ini dilakukan menggunakan modul [[train_test_split]] (https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) dari library scikit-learn.
 - Data latih akan di standarisasi menggunakan StandardScaler dari library scikit-learn.
-- 
+  
 ### Alasan memilih tahapan tersebut di data preparation yaitu : 
 Train Test Split :
 - Evaluasi Kinerja Model
@@ -95,6 +95,7 @@ Standarisasi :
 - Percepatan Konvergensi Algoritma
 - Menghindari Bias
 - Interpretabilitas Model
+  
 Penerapan train-test split dan standarisasi dapat membantu memastikan bahwa model yang dihasilkan dapat diandalkan, umum, dan tidak dipengaruhi oleh masalah yang mungkin muncul akibat pembagian data yang tidak benar atau perbedaan skala variabel yang signifikan.
 
 ## Modeling
@@ -104,7 +105,9 @@ Kedua, model akan dibuat menggunakan algoritma RandomForest [[RandomForest]](htt
 
 ## Evaluation
 Mengevaluasi model regresi sebenarnya relatif sederhana. Secara umum, hampir semua metrik adalah sama. Jika prediksi mendekati nilai sebenarnya, performanya baik. Sedangkan jika tidak, performanya buruk. Secara teknis, selisih antara nilai sebenarnya dan nilai prediksi disebut eror. Maka, semua metrik mengukur seberapa kecil nilai eror tersebut. Dalam proyek ini, evaluasi model dilakukan menggunakan metrik Mean Squared Error (MSE). Metrik ini mengukur jumlah rata-rata selisih kuadrat antara nilai aktual dan nilai prediksi [[Evaluasi Model]](https://www.dicoding.com/academies/319/tutorials/18595).
-MSE MSE didefinisikan dalam persamaan berikut:
+
+MSE didefinisikan dalam persamaan berikut:
+
 ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/mse.jpeg)  
 Keterangan:  
 N = jumlah dataset  
@@ -127,18 +130,6 @@ Seperti terlihat pada gambar, saat dibandingkan dengan algoritma LinearRegressio
 
 Pada proses pengujian dapat terlihat hasil prediksi dari model yang menggunakan RandomForest lebih akurat dengan nilai sebenarnya. Oleh karena itu algoritma ini yang akan dipilih sebagai model utama untuk memprediksi kisaran gaji karyawan.
 
-
-
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
-
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
-
-**---Ini adalah bagian akhir laporan---**
 
 _Catatan:_
 - _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
