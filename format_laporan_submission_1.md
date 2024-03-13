@@ -89,6 +89,7 @@ Train Test Split :
 - Evaluasi Kinerja Model
 - Mencegah Overfitting
 - Validasi Model
+  
 Standarisasi :
 - Mengatasi masalah skala
 - Percepatan Konvergensi Algoritma
