@@ -80,8 +80,10 @@ Berdasarkan visualisasi heatmap di atas dapat disimpulkan bahwa:
 - Variabel Years of experience berkorelasi positif dengan variabel Salary, skornya yaitu 0.8.
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
-
+Berikut merupakan tahapan-tahapan dalam Data Preparation:
+Data yang ada akan dipisah menjadi dua bagian, yaitu data latih dan data uji, dengan proporsi 80:10. Proses ini dilakukan menggunakan modul [[train_test_split]] (https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) dari library scikit-learn.
+Data latih akan di standarisasi menggunakan StandardScaler dari library scikit-learn.
+- 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menjelaskan proses data preparation yang dilakukan
 - Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
