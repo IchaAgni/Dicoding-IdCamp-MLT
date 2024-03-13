@@ -81,23 +81,52 @@ Berdasarkan visualisasi heatmap di atas dapat disimpulkan bahwa:
 
 ## Data Preparation
 Berikut merupakan tahapan-tahapan dalam Data Preparation:
-Data yang ada akan dipisah menjadi dua bagian, yaitu data latih dan data uji, dengan proporsi 80:10. Proses ini dilakukan menggunakan modul [[train_test_split]] (https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) dari library scikit-learn.
-Data latih akan di standarisasi menggunakan StandardScaler dari library scikit-learn.
+- Data yang ada akan dipisah menjadi dua bagian, yaitu data latih dan data uji, dengan proporsi 80:10. Proses ini dilakukan menggunakan modul [[train_test_split]] (https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) dari library scikit-learn.
+- Data latih akan di standarisasi menggunakan StandardScaler dari library scikit-learn.
 - 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+### Alasan memilih tahapan tersebut di data preparation yaitu : 
+Train Test Split :
+- Evaluasi Kinerja Model
+- Mencegah Overfitting
+- Validasi Model
+Standarisasi :
+- Mengatasi masalah skala
+- Percepatan Konvergensi Algoritma
+- Menghindari Bias
+- Interpretabilitas Model
+Penerapan train-test split dan standarisasi dapat membantu memastikan bahwa model yang dihasilkan dapat diandalkan, umum, dan tidak dipengaruhi oleh masalah yang mungkin muncul akibat pembagian data yang tidak benar atau perbedaan skala variabel yang signifikan.
 
 ## Modeling
-Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
+Setelah menyelesaikan tahapan data preparation, langkah selanjutnya adalah membuat dua model sebagai perbandingan. Pertama, akan dibuat model menggunakan algoritma Linear Regression [[LinearRegression]](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html). Algoritma ini dipilih karena umum digunakan untuk menyelesaikan permasalahan regresi, serta memiliki kelebihan dalam kemudahan pemahaman. Model Linear Regression efektif untuk memodelkan hubungan linier antara variabel input dan output.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
+Kedua, model akan dibuat menggunakan algoritma RandomForest [[RandomForest]](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html). Kelebihan dari algoritma ini termasuk kemampuannya untuk mengatasi noise dan nilai yang hilang, serta efektif mengelola dataset dalam skala besar. Meskipun demikian, Random Forest juga memiliki kekurangan, seperti interpretasi yang sulit dan kebutuhan tuning model yang cermat untuk mendapatkan hasil yang optimal, terutama pada dataset yang kompleks.
 
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+Mengevaluasi model regresi sebenarnya relatif sederhana. Secara umum, hampir semua metrik adalah sama. Jika prediksi mendekati nilai sebenarnya, performanya baik. Sedangkan jika tidak, performanya buruk. Secara teknis, selisih antara nilai sebenarnya dan nilai prediksi disebut eror. Maka, semua metrik mengukur seberapa kecil nilai eror tersebut. Dalam proyek ini, evaluasi model dilakukan menggunakan metrik Mean Squared Error (MSE). Metrik ini mengukur jumlah rata-rata selisih kuadrat antara nilai aktual dan nilai prediksi [[Evaluasi Model]](https://www.dicoding.com/academies/319/tutorials/18595).
+MSE MSE didefinisikan dalam persamaan berikut:
+![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/mse.jpeg)  
+Keterangan:  
+N = jumlah dataset  
+yi = nilai sebenarnya  
+y_pred = nilai prediksi
+
+### Model dengan Algoritma LinearRegression  
+![LR-1](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/LR-1.png)  
+Seperti terlihat pada gambar, model yang dibuat menggunakan algortima LinearRegression memiliki nilai MSE yang sangat tinggi hingga mencapai 113458.095232	pada saat training dan 127004.94334 pada saat test, hal ini menunjukkan algoritma ini kurang baik untuk melakukan prediksi.  
+
+![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/LR2.jpg)  
+
+Pada proses pengujian pun dapat terlihat hasil prediksi tidak akurat dengan nilai sebenarnya.
+
+### Model dengan Algortima RandomForest  
+![RF-1](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/RF1.png)  
+Seperti terlihat pada gambar, saat dibandingkan dengan algoritma LinearRegression terlihat algortima RandomForest memiliki nilai MSE yang lebih rendah yaitu 13235.129443 pada saat training dan	15922.675464 pada saat test, hal ini menunjukkan algoritma RandomForest lebih baik untuk melakukan prediksi dibanding LinearRegression.  
+
+![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/RF2.jpg)  
+
+Pada proses pengujian dapat terlihat hasil prediksi dari model yang menggunakan RandomForest lebih akurat dengan nilai sebenarnya. Oleh karena itu algoritma ini yang akan dipilih sebagai model utama untuk memprediksi kisaran gaji karyawan.
+
+
 
 Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
 - Penjelasan mengenai metrik yang digunakan
