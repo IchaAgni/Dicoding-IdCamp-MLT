@@ -56,17 +56,28 @@ Metode ini memiliki kelebihan ketika digunakan untuk memprediksi nilai yang ada 
 Tujuan yang ingin dicapai adalah estimasi gaji, dan sebagai yang kita ketahui, estimasi gaji merupakan variabel yang bersifat kontinu. Dalam konteks prediksi variabel kontinu, ini dapat dianggap sebagai masalah regresi. Dalam hal regresi seperti ini, metrik Mean Squared Error (MSE) akan digunakan. Secara keseluruhan, MSE mengukur sejauh mana prediksi mendekati nilai aktual. Oleh karena itu, setiap model akan dievaluasi, dan kemudian algoritma yang memberikan nilai metrik terbaik akan dipilih.
  
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
+Dataset yang digunakan pada proyek ini dibuat oleh [[RubyDoby]](https://www.kaggle.com/rubydoby) yang di upload ke [Kaggle](https://www.kaggle.com/) Sumber dataset: [[Years of experience and employees salary]](https://www.kaggle.com/datasets/rubydoby/years-of-experience-and-employees-salary).
 
-Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+Pada berkas yang diunduh pada [link tersebut](https://www.kaggle.com/datasets/rubydoby/years-of-experience-and-employees-salary) yaitu [employee_salaries.csv](https://www.kaggle.com/datasets/rubydoby/years-of-experience-and-employees-salary?select=employee_salaries.csv) terdapat 1500 baris dan 2 kolom. 
 
-### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
+### Variabel-variabel pada Years of experience and employee salary dataset adalah sebagai berikut:
+- Years of Experience: total tahun pengalaman kerja.
+- Salary: total gaji karyawan per tahun dalam kurs dollar.
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+### Exploratory Data Analysis - Univariate Analysis
+![univariate](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/uni-years%20of%20experience.png)
+Dari hasil visualisasi di atas dapat disimpulkan bahwa: 
+- Sebagian besar sampel Years of experience berada di kisaran 8-14 tahun.
+- Sebagian besar sampel Salary berada di kisaran 86000-90000.
+
+### Exploratory Data Analysis - Multivariate Analysis
+![multivariate-1](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/multivariate.png)   
+Dari hasil visualisasi data di atas dapat disimpulkan bahwa:
+-  Pola sebaran data pada grafik pairplot di atas memiliki korelasi posistif
+
+![multivariate-2](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/heatmap.png)  
+Berdasarkan visualisasi heatmap di atas dapat disimpulkan bahwa:
+- Variabel Years of experience berkorelasi positif dengan variabel Salary, skornya yaitu 0.8.
 
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
