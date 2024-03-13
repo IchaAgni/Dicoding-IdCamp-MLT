@@ -45,11 +45,12 @@ Solusi yang dapat dilakukan untuk memenuhi goals proyek ini diantaranya sebagai 
 - Membuat 2 model Machine Learning yaitu dengan algoritma LinearRegression dan RandomForest.
    * Konsep dasar dari algoritma Linear Regression adalah melakukan prediksi nilai y berdasarkan nilai x yang diketahui, sambil mencari nilai m dan b sehingga kesalahan (error) dapat diminimalkan sebanyak mungkin [[Simple Linear Regression di Python]](https://medium.com/@adiptamartulandi/belajar-machine-learning-simple-linear-regression-di-python-e82972695eaf)
 
-     ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/rumus.png).
+     ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/rumus.png)
      
 Metode ini memiliki kelebihan ketika digunakan untuk memprediksi nilai yang ada di masa depan, terutama jika hubungan antara variabel independen dan dependen bersifat linear. Namun, kekurangan metode ini terletak pada keterbatasannya ketika variabel dependen dan independen jarang menunjukkan hubungan yang jelas dalam situasi sebenarnya [[LinearRegression]](https://caraguna.com/apa-itu-linear-regression-dalam-machine-learning/)
 
-![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/LinearRegression.png).
+![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/LinearRegression.png)
+
     * Konsep dari algoritma RandomForest yaitu model prediksi yang terdiri dari beberapa model dan bekerja secara bersama-sama. Kelebihan dari metode ini yakni jika dataset berjumlah banyak maka RandomForest akan bekerja secara efisien.
 
 ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/tree.png).
