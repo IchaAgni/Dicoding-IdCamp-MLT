@@ -13,7 +13,7 @@ memerlukan tenaga suatu karyawan [Pengaruh Gaji Dan Insentif Terhadap Kinerja Ka
 Dengan begitu perlu bagi perusahaan untuk memperhatikan para pekerjanya. Salah satu usaha untuk meningkatkan mutu SDM yaitu dengan pemberian gaji berdasarkan pengalaman kerja. Ketika seseorang yang sudah lama bekerja di suatu perusahaan maka gajinya akan semakin naik. Proyek ini ditujukan guna
 menganalisis prediksi gaji karyawan berdasarkan lama tahun bekerja [Prediksi Gaji Berdasarkan Pengalaman Bekerja Menggunakan Metode Regresi Linear](https://doi.org/10.20895/dinda.v2i2.548) 
 
-Dalam artikel berjudul “Competing on Analytics” yang diterbitkan oleh [Harvard Business Review](https://hbr.org/2006/01/competing-on-analytics), Davenport, seorang ahli *business analytics* berpendapat bahwa senjata strategis di bidang bisnis saat ini adalah pengambilan keputusan analitik. Ia merupakan teknik pengambilan keputusan berdasarkan berbagai informasi yang diekstrak dari data.
+Dalam artikel berjudul “Competing on Analytics” yang diterbitkan oleh [1[Harvard Business Review]](https://hbr.org/2006/01/competing-on-analytics), Davenport, seorang ahli *business analytics* berpendapat bahwa senjata strategis di bidang bisnis saat ini adalah pengambilan keputusan analitik. Ia merupakan teknik pengambilan keputusan berdasarkan berbagai informasi yang diekstrak dari data.
 
 > Masalah ini diselasaikan dengan menghasilkan model yang dapat memprediksi kisaran gaji calon karyawan di perusahaan berdasarkan tahun pengalaman bekerja
 Perusahaan akan mencoba menerapkan 2 model Machine Learning dan kemudian memilih model yang prediksinya paling mendekati. 
