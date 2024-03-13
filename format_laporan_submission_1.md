@@ -47,8 +47,9 @@ Solusi yang dapat dilakukan untuk memenuhi goals proyek ini diantaranya sebagai 
 
      ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/rumus.png).
      
-Metode ini memiliki kelebihan ketika digunakan untuk memprediksi nilai yang ada di masa depan, terutama jika hubungan antara variabel independen dan dependen bersifat linear. Namun, kekurangan metode ini terletak pada keterbatasannya ketika variabel dependen dan independen jarang menunjukkan hubungan yang jelas dalam situasi sebenarnya [[LinearRegression]](https://caraguna.com/apa-itu-linear-regression-dalam-machine-learning/).
-![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/LinearRegression.png)
+Metode ini memiliki kelebihan ketika digunakan untuk memprediksi nilai yang ada di masa depan, terutama jika hubungan antara variabel independen dan dependen bersifat linear. Namun, kekurangan metode ini terletak pada keterbatasannya ketika variabel dependen dan independen jarang menunjukkan hubungan yang jelas dalam situasi sebenarnya [[LinearRegression]](https://caraguna.com/apa-itu-linear-regression-dalam-machine-learning/)
+
+![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/LinearRegression.png).
  
 ## Data Understanding
 Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
