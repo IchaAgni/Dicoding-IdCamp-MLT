@@ -11,7 +11,7 @@ mewujudkan tujuan yang optimal tentunya perusahaan
 memerlukan tenaga suatu karyawan [[Pengaruh Gaji Dan Insentif Terhadap Kinerja Karyawan]](https://jurnal.stiekma.ac.id/index.php/JAMIN/article/view/53).
 
 Dengan begitu perlu bagi perusahaan untuk memperhatikan para pekerjanya. Salah satu usaha untuk meningkatkan mutu SDM yaitu dengan pemberian gaji berdasarkan pengalaman kerja. Ketika seseorang yang sudah lama bekerja di suatu perusahaan maka gajinya akan semakin naik. Proyek ini ditujukan guna
-menganalisis prediksi gaji karyawan berdasarkan lama tahun bekerja [[Prediksi Gaji Berdasarkan Pengalaman Bekerja Menggunakan Metode Regresi Linear]].(https://doi.org/10.20895/dinda.v2i2.548) 
+menganalisis prediksi gaji karyawan berdasarkan lama tahun bekerja [[Prediksi Gaji Berdasarkan Pengalaman Bekerja Menggunakan Metode Regresi Linear]](https://doi.org/10.20895/dinda.v2i2.548).
 
 Dalam artikel berjudul “Competing on Analytics” yang diterbitkan oleh [[Harvard Business Review]](https://hbr.org/2006/01/competing-on-analytics), Davenport, seorang ahli *business analytics* berpendapat bahwa senjata strategis di bidang bisnis saat ini adalah pengambilan keputusan analitik. Ia merupakan teknik pengambilan keputusan berdasarkan berbagai informasi yang diekstrak dari data.
 
@@ -41,10 +41,9 @@ Untuk menjawab pertanyaan tersebut, dibuat "Predictive Modelling" dengan tujuan 
 - Melakukan evaluasi terhadap metrik dari masing-masing algoritma.
 
 ### Solution statements
-    - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-    - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
-    
-Konsep dasar dari algoritma Linear Regression adalah melakukan prediksi nilai y berdasarkan nilai x yang diketahui, sambil mencari nilai m dan b sehingga kesalahan (error) dapat diminimalkan sebanyak mungkin [[Simple Linear Regression di Python]](https://medium.com/@adiptamartulandi/belajar-machine-learning-simple-linear-regression-di-python-e82972695eaf)
+Solusi yang dapat dilakukan untuk memenuhi goals proyek ini diantaranya sebagai berikut:
+- Membuat 2 model Machine Learning yaitu dengan algoritma LinearRegression dan RandomForest.
+* Konsep dasar dari algoritma Linear Regression adalah melakukan prediksi nilai y berdasarkan nilai x yang diketahui, sambil mencari nilai m dan b sehingga kesalahan (error) dapat diminimalkan sebanyak mungkin [[Simple Linear Regression di Python]](https://medium.com/@adiptamartulandi/belajar-machine-learning-simple-linear-regression-di-python-e82972695eaf)
 
  ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/rumus.png).
  
