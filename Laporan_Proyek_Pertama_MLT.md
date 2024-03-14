@@ -46,13 +46,13 @@ Solusi yang dapat dilakukan untuk memenuhi goals proyek ini diantaranya sebagai 
    * Konsep dasar dari algoritma Linear Regression adalah melakukan prediksi nilai y berdasarkan nilai x yang diketahui, sambil mencari nilai m dan b sehingga kesalahan (error) dapat diminimalkan sebanyak mungkin [[Simple Linear Regression di Python]](https://medium.com/@adiptamartulandi/belajar-machine-learning-simple-linear-regression-di-python-e82972695eaf)
 
      ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/rumus.png)
+ 
+     ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/LinearRegression.png)
      
-Metode ini memiliki kelebihan ketika digunakan untuk memprediksi nilai yang ada di masa depan, terutama jika hubungan antara variabel independen dan dependen bersifat linear. Namun, kekurangan metode ini terletak pada keterbatasannya ketika variabel dependen dan independen jarang menunjukkan hubungan yang jelas dalam situasi sebenarnya [[LinearRegression]](https://caraguna.com/apa-itu-linear-regression-dalam-machine-learning/)
-
- ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/LinearRegression.png)
    * Konsep dari algoritma RandomForest yaitu model prediksi yang terdiri dari beberapa model dan bekerja secara bersama-sama. Kelebihan dari metode ini yakni jika dataset berjumlah banyak maka RandomForest akan bekerja secara efisien.
 
 ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/image/tree.png)
+
 Tujuan yang ingin dicapai adalah estimasi gaji, dan sebagai yang kita ketahui, estimasi gaji merupakan variabel yang bersifat kontinu. Dalam konteks prediksi variabel kontinu, ini dapat dianggap sebagai masalah regresi. Dalam hal regresi seperti ini, metrik Mean Squared Error (MSE) akan digunakan. Secara keseluruhan, MSE mengukur sejauh mana prediksi mendekati nilai aktual. Oleh karena itu, setiap model akan dievaluasi, dan kemudian algoritma yang memberikan nilai metrik terbaik akan dipilih.
  
 ## Data Understanding
@@ -104,9 +104,8 @@ Setelah menyelesaikan tahapan data preparation, langkah selanjutnya adalah membu
 ### 1. Model Development dengan Linear Regression 
 Regresi Linear adalah sebuah teknik klasik di statistika untuk mempelajari hubungan antar-variabel dan memprediksi masa depan. Walaupun tidak seakurat teknik yang lebih modern, kelebihannya adalah mudah dimengerti dan tidak mensyaratkan data harus dalam bentuk tertentu. Regresi linear mencoba untuk memodelkan hubungan antara dua variabel dengan mencocokkan persamaan linier dengan data yang diamati. Satu variabel dianggap sebagai variabel penjelas, dan yang lainnya dianggap sebagai variabel dependen. Garis regresi linier memiliki persamaan bentuk Y = a + bX, di mana X adalah variabel penjelas dan Y adalah variabel dependen. Kemiringan garis adalah b, dan a adalah intersep (nilai y ketika x = 0)[[LinearRegression]](https://medium.com/@mi02041999/pengertian-regresi-linear-serta-keuntungan-dan-kerugian-3ff1379b403a).
 
-### Keuntungan dari regresi linier
-Ketika kita tahu hubungan antara variabel independen dan dependen memiliki hubungan linier, algoritme ini adalah yang terbaik untuk digunakan karena ini adalah yang paling kompleks dibandingkan dengan algoritma lain yang juga mencoba menemukan hubungan antara variabel independen dan dependen.
-Kerugian dari regresi linier[[LinearRegression]](https://medium.com/@mi02041999/pengertian-regresi-linear-serta-keuntungan-dan-kerugian-3ff1379b403a).
+### Kelebihan dari regresi linier
+Ketika kita tahu hubungan antara variabel independen dan dependen memiliki hubungan linier, algoritme ini adalah yang terbaik untuk digunakan. Metode ini memiliki kelebihan ketika digunakan untuk memprediksi nilai yang ada di masa depan, terutama jika hubungan antara variabel independen dan dependen bersifat linear. [[LinearRegression]](https://caraguna.com/apa-itu-linear-regression-dalam-machine-learning/)
 
 ### Kerugian dari regresi linier
 Dalam kehidupan nyata, tidak ada banyak masalah di dunia yang menunjukkan hubungan yang jelas antara variabel independen dan dependen. Sebagai contoh, mari kita kembali ke contoh biaya contoh. Seringkali ada banyak faktor lain yang berperan dalam menentukan biaya. Namun, dengan itu dikatakan orang dapat berargumen bahwa kita hanya perlu menambahkan nilai-nilai yang lebih independen seperti kedekatan dengan transportasi, tingkat kejahatan dan lain-lain.
