@@ -81,7 +81,7 @@ Berdasarkan visualisasi heatmap di atas dapat disimpulkan bahwa:
 
 ## Data Preparation
 Berikut merupakan tahapan-tahapan dalam Data Preparation:
-- Data yang ada akan dipisah menjadi dua bagian, yaitu data latih dan data uji, dengan proporsi 80:10. Proses ini dilakukan menggunakan modul [[train_test_split]] (https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) dari library scikit-learn.
+- Data yang ada akan dipisah menjadi dua bagian, yaitu data latih dan data uji, dengan proporsi 80:10. Proses ini dilakukan menggunakan modul [[train_test_split]](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) dari library scikit-learn.
 - Data latih akan di standarisasi menggunakan StandardScaler dari library scikit-learn.
   
 ### Alasan memilih tahapan tersebut di data preparation yaitu : 
@@ -99,9 +99,33 @@ Standarisasi :
 Penerapan train-test split dan standarisasi dapat membantu memastikan bahwa model yang dihasilkan dapat diandalkan, umum, dan tidak dipengaruhi oleh masalah yang mungkin muncul akibat pembagian data yang tidak benar atau perbedaan skala variabel yang signifikan.
 
 ## Modeling
-Setelah menyelesaikan tahapan data preparation, langkah selanjutnya adalah membuat dua model sebagai perbandingan. Pertama, akan dibuat model menggunakan algoritma Linear Regression [[LinearRegression]](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html). Algoritma ini dipilih karena umum digunakan untuk menyelesaikan permasalahan regresi, serta memiliki kelebihan dalam kemudahan pemahaman. Model Linear Regression efektif untuk memodelkan hubungan linier antara variabel input dan output.
+Setelah menyelesaikan tahapan data preparation, langkah selanjutnya adalah membuat dua model sebagai perbandingan. Model Machine Learning yang digunakan dalam proyek ini ada dua yaitu dengan algoritma LinearRegression dan RandomForest.
 
-Kedua, model akan dibuat menggunakan algoritma RandomForest [[RandomForest]](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html). Kelebihan dari algoritma ini termasuk kemampuannya untuk mengatasi noise dan nilai yang hilang, serta efektif mengelola dataset dalam skala besar. Meskipun demikian, Random Forest juga memiliki kekurangan, seperti interpretasi yang sulit dan kebutuhan tuning model yang cermat untuk mendapatkan hasil yang optimal, terutama pada dataset yang kompleks.
+### 1. Model Development dengan Linear Regression 
+Regresi Linear adalah sebuah teknik klasik di statistika untuk mempelajari hubungan antar-variabel dan memprediksi masa depan. Walaupun tidak seakurat teknik yang lebih modern, kelebihannya adalah mudah dimengerti dan tidak mensyaratkan data harus dalam bentuk tertentu. Regresi linear mencoba untuk memodelkan hubungan antara dua variabel dengan mencocokkan persamaan linier dengan data yang diamati. Satu variabel dianggap sebagai variabel penjelas, dan yang lainnya dianggap sebagai variabel dependen. Garis regresi linier memiliki persamaan bentuk Y = a + bX, di mana X adalah variabel penjelas dan Y adalah variabel dependen. Kemiringan garis adalah b, dan a adalah intersep (nilai y ketika x = 0)[[LinearRegression]](https://medium.com/@mi02041999/pengertian-regresi-linear-serta-keuntungan-dan-kerugian-3ff1379b403a).
+
+### Keuntungan dari regresi linier
+Ketika kita tahu hubungan antara variabel independen dan dependen memiliki hubungan linier, algoritme ini adalah yang terbaik untuk digunakan karena ini adalah yang paling kompleks dibandingkan dengan algoritma lain yang juga mencoba menemukan hubungan antara variabel independen dan dependen.
+Kerugian dari regresi linier[[LinearRegression]](https://medium.com/@mi02041999/pengertian-regresi-linear-serta-keuntungan-dan-kerugian-3ff1379b403a).
+
+### Kerugian dari regresi linier
+Dalam kehidupan nyata, tidak ada banyak masalah di dunia yang menunjukkan hubungan yang jelas antara variabel independen dan dependen. Sebagai contoh, mari kita kembali ke contoh biaya contoh. Seringkali ada banyak faktor lain yang berperan dalam menentukan biaya. Namun, dengan itu dikatakan orang dapat berargumen bahwa kita hanya perlu menambahkan nilai-nilai yang lebih independen seperti kedekatan dengan transportasi, tingkat kejahatan dan lain-lain.
+Tetapi, bahkan dengan mengatakan itu tidak ada cara kita dapat mengkonfirmasi bahwa rumah 182 meter akan harganya persis 250 juta rupiah hanya karena tidak ada yang tak terhindarkan sampai terjadi. Saya ingat menggunakan kuadrat terkecil biasa untuk laporan laboratorium tentang menentukan hubungan antara panjang pendulum dan periode ‘nya. Menggunakan OLS saya adalah 0,1 dari nilai yang dihitung menggunakan rumus. 0,1 dalam pembelajaran mesin adalah angka yang besar.[[LinearRegression]](https://medium.com/@mi02041999/pengertian-regresi-linear-serta-keuntungan-dan-kerugian-3ff1379b403a).
+
+### 2. Model Development dengan Random Forest
+Random Forest adalah algoritma machine learning yang menggabungkan keluaran dari beberapa decision tree untuk mencapai satu hasil. Sesuai namanya, Forest atau 'hutan' dibentuk dari banyak tree (pohon) yang diperoleh melalui proses bagging atau bootstrap aggregating. Setiap tree pada Random Forest akan mengeluarkan prediksi kelas. Prediksi kelas dengan vote terbanyak menjadi kandidat prediksi pada model. Semakin banyak jumlah tree maka akan menghasilkan akurasi yang lebih tinggi dan mencegah masalah overfitting. Algoritma Random Forest diperkenalkan oleh Leo Breiman dan Adele Cutler. Algoritma ini didasarkan pada konsep ensemble learning, yakni proses menggabungkan beberapa pengklasifikasi untuk memecahkan masalah yang kompleks dan untuk meningkatkan kinerja model[[RandomForest]](https://www.trivusi.web.id/2022/08/algoritma-random-forest.html).
+
+### Kelebihan Algoritma Random Forest
+- Kuat terhadap data outlier (pencilan data).
+- Bekerja dengan baik dengan data non-linear.
+- Risiko overfitting lebih rendah.
+- Berjalan secara efisien pada kumpulan data yang besar.
+- Akurasi yang lebih baik daripada algoritma klasifikasi lainnya.
+  
+### Kekurangan Algoritma Random Forest
+- Random Forest cenderung bias saat berhadapan dengan variabel kategorikal.
+- Waktu komputasi pada dataset berskala besar relatif lambat
+- Tidak cocok untuk metode linier dengan banyak fitur sparse
 
 ## Evaluation
 Mengevaluasi model regresi sebenarnya relatif sederhana. Secara umum, hampir semua metrik adalah sama. Jika prediksi mendekati nilai sebenarnya, performanya baik. Sedangkan jika tidak, performanya buruk. Secara teknis, selisih antara nilai sebenarnya dan nilai prediksi disebut eror. Maka, semua metrik mengukur seberapa kecil nilai eror tersebut. Dalam proyek ini, evaluasi model dilakukan menggunakan metrik Mean Squared Error (MSE). Metrik ini mengukur jumlah rata-rata selisih kuadrat antara nilai aktual dan nilai prediksi [[Evaluasi Model]](https://www.dicoding.com/academies/319/tutorials/18595).
