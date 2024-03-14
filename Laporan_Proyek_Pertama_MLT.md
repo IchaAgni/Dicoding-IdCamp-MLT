@@ -154,3 +154,6 @@ Seperti terlihat pada gambar, saat dibandingkan dengan algoritma LinearRegressio
 
 Pada proses pengujian dapat terlihat hasil prediksi dari model yang menggunakan RandomForest lebih akurat dengan nilai sebenarnya. Oleh karena itu algoritma ini yang akan dipilih sebagai model utama untuk memprediksi kisaran gaji karyawan.
 
+## Conclusion
+Pada projek ini kita telah melalui berbagai tahapan mulai dari memahami Domain proyek, kemudian memahami kasus bisnis yang ingin diselesaikan, lalu mencoba mengerti data yang ada, menyiapkan dataset, modeling hingga evaluasi. Kita juga telah berhasil menyelesaikan masalah bisnis dan mencapai tujuan yang ada melalui pembangunan 2 model kemudian memilih satu model terbaik sebagai solusi masalah kita yaitu model **Random Forest**. Harapannya melalui projek ini dapat memberikan manfaat bagi penulis dan pembaca secara luas. Sekian terima kasih telah membaca projek ini.
+
