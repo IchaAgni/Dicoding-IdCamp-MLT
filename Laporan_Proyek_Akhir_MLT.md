@@ -4,21 +4,17 @@
 
 Dengan kemajuan teknologi, jumlah informasi yang tersedia semakin meningkat. Proses pencarian informasi melalui internet menjadi semakin sulit karena begitu banyaknya informasi yang tersedia. Jika pada masa lalu informasi hanya dapat diakses melalui media cetak, perkembangan teknologi telah menggeser penyediaan informasi ke media elektronik. Saat ini, dengan adanya internet, hampir semua jenis informasi sudah tersedia secara daring dalam berbagai versi, yang kadang membuat bingung karena jumlahnya yang begitu besar.
 
-Trend yang sama terjadi dalam industri film. Menurut British Film Institute (BFI), jumlah film box office yang diproduksi terus meningkat dari tahun 2009 hingga 2015. Pada tahun 2009, ada 503 film yang diproduksi, sementara pada tahun 2015, jumlahnya meningkat menjadi 759 film. Karena jumlah film yang tersedia begitu banyak, sering kali penonton merasa kebingungan dalam memilih film yang ingin ditonton di internet [[Sistem Rekomendasi Film]](http://eprints.undip.ac.id/60611/1/laporan_24010312130054_1.pdf).
+Trend yang sama terjadi dalam industri film. Menurut British Film Institute (BFI), jumlah film box office yang diproduksi terus meningkat dari tahun 2009 hingga 2015. Pada tahun 2009, ada 503 film yang diproduksi, sementara pada tahun 2015, jumlahnya meningkat menjadi 759 film. Karena jumlah film yang tersedia begitu banyak, sering kali penonton merasa kebingungan dalam memilih film yang ingin ditonton di internet [1](http://eprints.undip.ac.id/60611/1/laporan_24010312130054_1.pdf).
 
 Oleh karena itu, diperlukan sebuah sistem yang dapat membantu menyaring informasi dan memberikan rekomendasi yang sesuai dengan preferensi pengguna. Sistem ini sering disebut sebagai sistem rekomendasi. Frank Kane, salah satu pionir Sistem Rekomendasi dalam course Building Recommender Systems with Machine Learning and AI, mendefinisikan sistem rekomendasi sebagai berikut.
 
-*“A system that predicts ratings or preferences a user might give to a product. Often these are sorted and presented as “top-N'' recommendations. Also known as recommender engines, recommendation systems, and recommendation platforms”*. 
+*“A system that predicts ratings or preferences a user might give to a product. Often these are sorted and presented as “top-N'' recommendations. Also known as recommender engines, recommendation systems, and recommendation platforms”* [2](https://www.dicoding.com/academies/319/corridor)
 
-Sistem rekomendasi memprediksi rating atau preferensi pengguna terhadap item tertentu. Rekomendasi ini dibuat berdasarkan perilaku pengguna di masa lalu atau perilaku pengguna lainnya. Jadi, sistem ini akan merekomendasikan sesuatu terhadap pengguna berdasarkan data perilaku atau preferensi dari waktu ke waktu. 
+Sistem rekomendasi memprediksi rating atau preferensi pengguna terhadap item tertentu. Rekomendasi ini dibuat berdasarkan perilaku pengguna di masa lalu atau perilaku pengguna lainnya. Jadi, sistem ini akan merekomendasikan sesuatu terhadap pengguna berdasarkan data perilaku atau preferensi dari waktu ke waktu [3](https://www.dicoding.com/academies/319/tutorials/17109)
 Pada proyek ini untuk mendapatkan hasil rekomendasi menggunakan algoritma content based filtering dengan mencari kemiripan bobot dari term pada hasil pre-processing judul film dan rating film. Pembobotan dilakukan menggunakan metode TF-IDF yang telah dinormalisasi. Kemudian hasil pembobotan akan melalui tahap cosine similarity untuk mencari kemiripan berdasarkan bobot dan diakhiri dengan filtering berdasarkan genre. 
 
-Referensi yang di gunakan :
-- [Dicoding, Machine Learning Terapan ](https://www.dicoding.com/academies/319/corridor)
-- [Sistem Rekomendasi](https://www.dicoding.com/academies/319/tutorials/17109)
-
 ## Business Understanding
-Film merupakan salah satu jenis hiburan yang sering dikonsumsi oleh orang-orang untuk menghibur dirinya dari rutinitas melelahkan. Film sendiri memiliki definisi sebagai sebuah medium komunikasi audio visual yang tak hanya memberikan hiburan, tapi juga menawarkan informasi, dan bahkan bisa menyentuh emosi penontonnya. Menurut Hiawan Pratista (2008), film adalah media audio visual yang menggabungkan kedua unsur, yaitu naratif dan sinematik. Unsur naratif sendiri berhubungan dengan tema sedangkan unsur sinematik adalah alur atau jalan ceritanya yang runtun dari awal hingga akhir [[Definisi Film]](https://entertainment.kompas.com/read/2022/10/19/150302666/pengertian-film-definisi-jenis-dan-fungsinya?page=all).
+Film merupakan salah satu jenis hiburan yang sering dikonsumsi oleh orang-orang untuk menghibur dirinya dari rutinitas melelahkan. Film sendiri memiliki definisi sebagai sebuah medium komunikasi audio visual yang tak hanya memberikan hiburan, tapi juga menawarkan informasi, dan bahkan bisa menyentuh emosi penontonnya. Menurut Hiawan Pratista (2008), film adalah media audio visual yang menggabungkan kedua unsur, yaitu naratif dan sinematik. Unsur naratif sendiri berhubungan dengan tema sedangkan unsur sinematik adalah alur atau jalan ceritanya yang runtun dari awal hingga akhir [4](https://entertainment.kompas.com/read/2022/10/19/150302666/pengertian-film-definisi-jenis-dan-fungsinya?page=all).
 
 Dalam proyek ini, salah satu faktor yang mempengaruhi minat seseorang untuk menonton film adalah genre film tersebut. Sebagai contoh, seseorang yang menyukai film Jhon Wick kemungkinan besar juga akan tertarik dengan film Nobody, karena keduanya memiliki genre yang sama, yaitu Action. Oleh karena itu, dibuatlah sistem rekomendasi menggunakan pendekatan Machine Learning untuk mendeteksi kemiripan dari suatu film yang telah ditonton dengan film-filmlainnya menggunakan data judulfilm tersebut maka dapat diurutkan berdasarkan genre film-film yang paling mirip dengan film yang telah ditonton dan akan dijadikan rekomendasi film yang akan ditonton selanjutnya. 
 
@@ -59,16 +55,20 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 
 ### Deskripsi Variabel
 
- - **movies.csv**  
+ - **movies.csv**
+   
  ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/movies.JPG)  
+ 
  Gambar 1. Informasi variabel movies  
   Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
 	 - *movieId*: id film
 	 - *title*: Judul film
 	 - *genres*: genre film  
 
- - **ratings.csv**  
+ - **ratings.csv**
+   
  ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/rating.JPG )  
+ 
  Gambar 2. Informasi variabel ratings    
  Variabel-variabel yang terdapat pada file ratings.csv adalah sebagai berikut:  
    - *userId*: id user
@@ -197,3 +197,9 @@ Berdasarkan hasil yang tercantum dalam Tabel 3 pada bagian Result, dapat disimpu
 
 ### Conclusion
 Setelah melalui serangkaian proses yang komprehensif, mulai dari pengolahan dataset hingga evaluasi model, sistem rekomendasi menggunakan pendekatan Machine Learning Content-Based Filtering berhasil dibangun. Hasilnya memuaskan, di mana dari 10 judul film yang direkomendasikan, semua dianggap relevan dengan judul film yang diuji. Hal ini menunjukkan bahwa precision dari model ini mencapai 100%. Diharapkan implementasi sistem rekomendasi ini dapat membantu pengguna untuk menemukan berdasarkan genre film-film yang paling mirip dengan film yang telah ditonton sebelumnya dan dijadikan rekomendasi film yang akan ditonton selanjutnya. 
+
+### REFERENCES
+[1] F. Perdana, “SISTEM REKOMENDASI FILM MENGGUNAKAN ALGORITMA ITEM-BASED COLLABORATIVE FILTERING DAN BASIS DATA GRAPH,” Undergraduate thesis, 2017. http://eprints.undip.ac.id/60611/
+[2] Setiani, Tia Dwi. "Machine Learning Terapan". Dicoding. 2021. Tersedia: [tautan](https://www.dicoding.com/academies/319/corridor). Diakses pada 14 Maret 2024
+[3] Dicoding, 2024. Machine Learning Terapan | Sistem Rekomendasi. [Online]  Tersedia di: [tautan](https://www.dicoding.com/academies/319/tutorials/17109) [Diakses 16 Maret 2024]. 
+‌[4] K. C. Media, “Pengertian Film: Definisi, Jenis dan Fungsinya Halaman all,” KOMPAS.com, Oct. 19, 2022. https://entertainment.kompas.com/read/2022/10/19/150302666/pengertian-film-definisi-jenis-dan-fungsinya?page=all
