@@ -107,7 +107,7 @@ Tahap ini melibatkan penggunaan fungsi [*tolist()*](https://pandas.pydata.org/do
 
 ## Modeling
 Setelah persiapan data selesai, langkah selanjutnya adalah pembuatan model, yang melibatkan tahapan-tahapan berikut:
-- Melakukan Vektorisasi dengan TF-IDF
+Melakukan Vektorisasi dengan TF-IDF
 Pada tahap ini, data yang telah dipersiapkan dikonversi menjadi vektor menggunakan fungsi [tfidfvectorizer()](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) dari library sklearn. Proses ini bertujuan untuk mengidentifikasi korelasi antara judul film dengan kategori genre film.
 
  **Kelebihan**:
@@ -122,7 +122,7 @@ Pada tahap ini, data yang telah dipersiapkan dikonversi menjadi vektor menggunak
  - Sensitif terhadap Stop Words: Penggunaan stop words yang berlebihan dapat mempengaruhi hasil vektorisasi TF-IDF, karena kata-kata tersebut dapat memiliki bobot yang signifikan tergantung pada frekuensinya dalam korpus.
  - Tidak Membedakan Makna: TF-IDF tidak membedakan makna kata yang sama tetapi digunakan dalam konteks yang berbeda. Misalnya, kata "batu" dapat merujuk pada benda fisik atau nama lokasi, tetapi TF-IDF mungkin memberikan bobot yang sama untuk kedua makna tersebut.
 
-- Mengukur Tingkat Kesamaan dengan Cosine Similarity [Cosine Similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)
+Mengukur Tingkat Kesamaan dengan Cosine Similarity [Cosine Similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)
 Setelah data dikonversi menjadi vektor, langkah selanjutnya adalah mengukur tingkat kesamaan antara dua vektor menggunakan metode Cosine Similarity. Tujuan utamanya adalah untuk menentukan seberapa mirip dua vektor tersebut dengan melihat sudut kosinus antara keduanya. Semakin kecil sudut cosinus, semakin besar nilai cosine similarity.
 
  **Kelebihan**:
@@ -137,8 +137,8 @@ Setelah data dikonversi menjadi vektor, langkah selanjutnya adalah mengukur ting
  - Sensitif terhadap Bobot: Cosine Similarity bisa menjadi sensitif terhadap perbedaan dalam bobot yang diberikan pada fitur-fitur data. Ini dapat mempengaruhi hasil kesamaan, terutama jika bobot tidak diberikan secara tepat.
  - Tidak Membedakan Antar-Kategori: Cosine Similarity tidak secara otomatis dapat membedakan antara kategori data yang berbeda. Ini berarti bahwa dalam beberapa kasus, data dari kategori yang berbeda dapat memiliki kesamaan kosinus yang tinggi, meskipun sebenarnya berbeda dalam makna atau konteksnya.
 
-- Membuat Fungsi movie_recommendations()
- Tahap terakhir dari proses pemodelan adalah pembuatan fungsi untuk menghasilkan rekomendasi top-N. Fungsi ini disebut *movie_recommendations()*. Fungsi ini menggunakan teknik [argpartition](https://numpy.org/doc/stable/reference/generated/numpy.argpartition.html) untuk mengambil sejumlah nilai k tertinggi dari similarity data (dalam hal ini, dataframe cosine_sim_df). Data kemudian diurutkan dari nilai *similarity* tertinggi ke terendah, dan film yang sedang dicari [drop()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html) dihapus dari daftar rekomendasi agar tidak muncul kembali. Parameter fungsi *movie_recommendations()* adalah sebagai berikut:
+Membuat Fungsi movie_recommendations()
+Tahap terakhir dari proses pemodelan adalah pembuatan fungsi untuk menghasilkan rekomendasi top-N. Fungsi ini disebut *movie_recommendations()*. Fungsi ini menggunakan teknik [argpartition](https://numpy.org/doc/stable/reference/generated/numpy.argpartition.html) untuk mengambil sejumlah nilai k tertinggi dari similarity data (dalam hal ini, dataframe cosine_sim_df). Data kemudian diurutkan dari nilai *similarity* tertinggi ke terendah, dan film yang sedang dicari [drop()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html) dihapus dari daftar rekomendasi agar tidak muncul kembali. Parameter fungsi *movie_recommendations()* adalah sebagai berikut:
   - movie_title : Judul film (index kemiripan dataframe)(str)
   - similarity_data : Dataframe kesamaan simetris dengan judul film sebagai indeks dan kolom (object)
   - items : Mengandung nama dan fitur lain yang digunakan untuk mendefinisikan kemiripan (object)
