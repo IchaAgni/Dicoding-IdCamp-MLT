@@ -75,18 +75,34 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
    - *movieId*: id film
    - *rating*: rating yang diberikan user
    - *timestamp*: waktu user memberikan rating
-   - 
 
+  ### Exploratory Data Analysis - Univariate Analysis
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
+ - **Movies**  
+ ![unv-2](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/EDA-Movies.png)  
+ Gambar 3. Distribusi fitur genre
+ Dari hasil visualisasi pada Gambar 3 dapat disimpulkan bahwa:
+   -   Sebagian besar sampel film dari dataset movies ber-genre *drama* dan *comedy*, hal tersebut menunjukkan bahwa film yang tersedia lebih banyak ber-genre  _drama_  dan  _comedy_.  
+   
+ - **Rating**
+ ![unv-3](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/EDA-Rating.png)    
+ Gambar 4. Visualisasi fitur numerik rating  
+   Dari hasil visualisasi pada gambar 4 dapat disimpulkan bahwa:  
+   - Rentang rating film adalah 0,5 hingga 5
+   - Jumlah sampel terbanyak adalah film yang memiliki rating 4, hal ini menunjukkan bahwa banyak user yang menilai film dengan nilai 4.
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+Berikut adalah langkah-langkah dalam melakukan persiapan data:
+
+- Gabungkan Dataset dan Tangani Data yang Hilang
+Tahap ini melibatkan penggabungan kedua dataset, movies.csv dan ratings.csv, menggunakan fungsi [*merge()*(https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html). Setelah digabungkan, data yang memiliki nilai kosong atau hilang akan dihapus menggunakan fungsi [*dropna()*](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html) agar memudahkan proses berikutnya.
+
+- Hapus Data Duplikat
+Proses ini melibatkan penggunaan fungsi [*drop_duplicates()*](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html) untuk menghapus entri data yang sama, mencegah duplikasi yang tidak diinginkan dan mengurangi kebingungan.
+
+- Konversi Data Series Menjadi Format List
+Tahap ini melibatkan penggunaan fungsi [*tolist()*](https://pandas.pydata.org/docs/reference/api/pandas.Series.tolist.html) untuk mengonversi data series ke dalam bentuk list, mempermudah proses pemodelan data di tahap selanjutnya.
 
 ## Modeling
 Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
