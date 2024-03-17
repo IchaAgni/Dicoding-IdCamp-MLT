@@ -41,7 +41,7 @@ Untuk menjawab permasalahan di atas, maka akan goals/tujuan yang akan dicapai ya
     * mengurutkan data movieId dan menghapus data yg sama
 * Metode yang digunakan pada projek ini adalah Content Based Filtering. Content Based Filtering adalah Content-based filtering adalah metode yang digunakan dalam sistem rekomendasi dan analisis data yang berfokus pada karakteristik atau konten dari item-item yang ingin direkomendasikan atau dianalisis. Pendekatan ini menggunakan atribut-atribut atau fitur-fitur item untuk menentukan kesamaan antara item yang ada dan preferensi pengguna.Dalam konteks rekomendasi, content-based filtering berusaha untuk merekomendasikan item yang mirip dengan item yang telah disukai oleh pengguna berdasarkan karakteristik konten.
 
- ![image] https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/cbf.png
+ ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/cbf.png)
  
 ## Data Understanding
 Berikut merupakan informasi dari dataset yang digunakan:
