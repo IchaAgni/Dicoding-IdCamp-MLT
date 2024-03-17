@@ -158,15 +158,41 @@ Tahap terakhir dari proses pemodelan adalah pembuatan fungsi untuk menghasilkan 
 
 
 ## Evaluation
-Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
+Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi, sebagai contoh kita gunakan judul film *Piper (2016)* untuk menguji model.  
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+|    |   id   |      movie_title     |   genre   |
+|----|--------|----------------------|-----------|
+|548 |  2555  | Baby Geniuses (1999) |  Comedy   |  
 
-**---Ini adalah bagian akhir laporan---**
+Tabel 2. Informasi judul film uji  
+ 
+Dapat terlihat pada Tabel 2 bahwa film *Baby Geniuses (1999)* merupakan film dengan genre Comedy.  Selanjutnya kita lihat rekomendasi film yang sesuai dengan genre yang sama dengan film tersebut.  
 
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+
+| | movie_title  |   genre   |
+|-|--------------|-----------|
+|0| Andrew Dice Clay: Dice Rules (1991) | Comedy | 
+|1| Hawks and Sparrows (Uccellacci e Uccellini) (1... | Comedy | 
+|2| American Wedding (American Pie 3) (2003) | Comedy | 
+|3| Uptown Girls (2003) | Comedy | 
+|4| Start the Revolution Without Me (1970) | Comedy | 
+|5| Legally Blonde 2: Red, White & Blonde (2003) | Comedy | 
+|6| What's Up, Doc? (1972) | Comedy | 
+|7| Kiss Me, Stupid (1964) | Comedy | 
+|8| One, Two, Three (1961) | Comedy | 
+|9| It's Pat (1994) | Comedy |    
+
+Tabel 3. Hasil rekomendasi   
+
+Seperti terlihat pada Tabel 3, model berhasil menampilkan rekomendasi film berdasarkan genrenya. 
+
+### Result  
+
+Karena proyek ini menggunakan model Content-Based Filtering, metrik yang paling cocok untuk evaluasi adalah Precision. Secara matematis, rumusnya dapat dinyatakan sebagai berikut:
+[!image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/prescion.jpg)
+
+Berdasarkan hasil yang tercantum dalam Tabel 3 pada bagian Result, dapat disimpulkan bahwa dari 10 judul film yang direkomendasikan, semua film dianggap relevan. Oleh karena itu, nilai Precision dari model ini adalah 100%.
+
+### Conclusion
+Setelah melalui serangkaian proses yang komprehensif, mulai dari pengolahan dataset hingga evaluasi model, sistem rekomendasi menggunakan pendekatan Machine Learning Content-Based Filtering berhasil dibangun. Hasilnya memuaskan, di mana dari 10 judul film yang direkomendasikan, semua dianggap relevan dengan judul film yang diuji. Hal ini menunjukkan bahwa precision dari model ini mencapai 100%. Diharapkan implementasi sistem rekomendasi ini dapat membantu pengguna untuk menemukan berdasarkan genre film-film yang paling mirip dengan film yang telah ditonton sebelumnya dan dijadikan rekomendasi film yang akan ditonton selanjutnya. 
