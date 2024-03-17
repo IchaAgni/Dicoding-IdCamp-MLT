@@ -143,7 +143,28 @@ Tahap terakhir dari proses pemodelan adalah pembuatan fungsi untuk menghasilkan 
   - movie_title : Judul film (index kemiripan dataframe)(str)
   - similarity_data : Dataframe kesamaan simetris dengan judul film sebagai indeks dan kolom (object)
   - items : Mengandung nama dan fitur lain yang digunakan untuk mendefinisikan kemiripan (object)
-  - k : Jumlah rekomendasi yang ingin diberikan(int)
+  - k : Jumlah rekomendasi yang ingin diberikan(int).
+
+Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi, sebagai contoh gunakan judul film *Baby Geniuses (1999)* untuk menguji model.  
+
+|    |   id   |      movie_title     |   genre   |
+|----|--------|----------------------|-----------|
+|548 |  2555  | Baby Geniuses (1999) |  Comedy   | 
+
+ Selanjutnya lihat rekomendasi film yang sesuai dengan genre yang sama dengan film *Baby Geniuses (1999)*.
+ 
+| | movie_title  |   genre   |
+|-|--------------|-----------|
+|0| Andrew Dice Clay: Dice Rules (1991) | Comedy | 
+|1| Hawks and Sparrows (Uccellacci e Uccellini) (1... | Comedy | 
+|2| American Wedding (American Pie 3) (2003) | Comedy | 
+|3| Uptown Girls (2003) | Comedy | 
+|4| Start the Revolution Without Me (1970) | Comedy | 
+|5| Legally Blonde 2: Red, White & Blonde (2003) | Comedy | 
+|6| What's Up, Doc? (1972) | Comedy | 
+|7| Kiss Me, Stupid (1964) | Comedy | 
+|8| One, Two, Three (1961) | Comedy | 
+|9| It's Pat (1994) | Comedy | 
     
  **Kelebihan**:
  - Kustomisasi Rekomendasi: Fungsi ini memungkinkan untuk membuat rekomendasi yang disesuaikan dengan preferensi pengguna atau kebutuhan bisnis tertentu, seperti menentukan jumlah rekomendasi yang diinginkan.
@@ -158,8 +179,7 @@ Tahap terakhir dari proses pemodelan adalah pembuatan fungsi untuk menghasilkan 
 
 
 ## Evaluation
-Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi, sebagai contoh kita gunakan judul film *Piper (2016)* untuk menguji model.  
-
+Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi, sebagai contoh gunakan judul film *Baby Geniuses (1999)* untuk menguji model.  
 
 |    |   id   |      movie_title     |   genre   |
 |----|--------|----------------------|-----------|
@@ -167,8 +187,7 @@ Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi,
 
 Tabel 2. Informasi judul film uji  
  
-Dapat terlihat pada Tabel 2 bahwa film *Baby Geniuses (1999)* merupakan film dengan genre Comedy.  Selanjutnya kita lihat rekomendasi film yang sesuai dengan genre yang sama dengan film tersebut.  
-
+Dapat terlihat pada Tabel 2 bahwa film *Baby Geniuses (1999)* merupakan film dengan genre Comedy.  Selanjutnya lihat rekomendasi film yang sesuai dengan genre yang sama dengan film tersebut.  
 
 | | movie_title  |   genre   |
 |-|--------------|-----------|
@@ -201,9 +220,9 @@ Setelah melalui serangkaian proses yang komprehensif, mulai dari pengolahan data
 ### REFERENCES
 [1] F. Perdana, “SISTEM REKOMENDASI FILM MENGGUNAKAN ALGORITMA ITEM-BASED COLLABORATIVE FILTERING DAN BASIS DATA GRAPH,” Undergraduate thesis, 2017.[http://eprints.undip.ac.id/60611/](http://eprints.undip.ac.id/60611/).
 
-[2] Setiani, Tia Dwi. "Machine Learning Terapan". Dicoding. 2021. Tersedia: [https://www.dicoding.com/academies/319/corridor](https://www.dicoding.com/academies/319/corridor). Diakses pada 14 Maret 2024.
+[2] Setiani, Tia Dwi. "Machine Learning Terapan". Dicoding. 2021. [Online] Tersedia: [https://www.dicoding.com/academies/319/corridor](https://www.dicoding.com/academies/319/corridor) [Diakses pada 14 Maret 2024].
 
 [3] Dicoding, 2024. Machine Learning Terapan | Sistem Rekomendasi. [Online]  Tersedia di: [https://www.dicoding.com/academies/319/tutorials/17109](https://www.dicoding.com/academies/319/tutorials/17109) [Diakses 16 Maret 2024]. 
 
-‌[4] K. C. Media, “Pengertian Film: Definisi, Jenis dan Fungsinya Halaman all,” KOMPAS.com, Oct. 19, 2022.[https://entertainment.kompas.com/read/2022/10/19/150302666/pengertian-film-definisi-jenis-dan-fungsinya?page=all](https://entertainment.kompas.com/read/2022/10/19/150302666/pengertian-film-definisi-jenis-dan-fungsinya?page=all).
+‌[4] K. C. Media, “Pengertian Film: Definisi, Jenis dan Fungsinya Halaman all,” KOMPAS.com, Oct. 19, 2022.[https://entertainment.kompas.com/read/2022/10/19/150302666/pengertian-film-definisi-jenis-dan-fungsinya?page=all](https://entertainment.kompas.com/read/2022/10/19/150302666/pengertian-film-definisi-jenis-dan-fungsinya?page=all) [Diakses 17 Maret 2024].
 
