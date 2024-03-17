@@ -190,7 +190,8 @@ Seperti terlihat pada Tabel 3, model berhasil menampilkan rekomendasi film berda
 ### Result  
 
 Karena proyek ini menggunakan model Content-Based Filtering, metrik yang paling cocok untuk evaluasi adalah Precision. Secara matematis, rumusnya dapat dinyatakan sebagai berikut:
-[!image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/prescion.jpg)
+
+![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/prescion.jpg)
 
 Berdasarkan hasil yang tercantum dalam Tabel 3 pada bagian Result, dapat disimpulkan bahwa dari 10 judul film yang direkomendasikan, semua film dianggap relevan. Oleh karena itu, nilai Precision dari model ini adalah 100%.
 
