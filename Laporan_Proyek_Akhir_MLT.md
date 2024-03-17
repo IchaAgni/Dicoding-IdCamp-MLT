@@ -201,9 +201,9 @@ Setelah melalui serangkaian proses yang komprehensif, mulai dari pengolahan data
 ### REFERENCES
 [1] F. Perdana, “SISTEM REKOMENDASI FILM MENGGUNAKAN ALGORITMA ITEM-BASED COLLABORATIVE FILTERING DAN BASIS DATA GRAPH,” Undergraduate thesis, 2017.[http://eprints.undip.ac.id/60611/](http://eprints.undip.ac.id/60611/).
 
-[2] Setiani, Tia Dwi. "Machine Learning Terapan". Dicoding. 2021. Tersedia: [tautan](https://www.dicoding.com/academies/319/corridor). Diakses pada 14 Maret 2024.
+[2] Setiani, Tia Dwi. "Machine Learning Terapan". Dicoding. 2021. Tersedia: [https://www.dicoding.com/academies/319/corridor](https://www.dicoding.com/academies/319/corridor). Diakses pada 14 Maret 2024.
 
-[3] Dicoding, 2024. Machine Learning Terapan | Sistem Rekomendasi. [Online]  Tersedia di: [tautan](https://www.dicoding.com/academies/319/tutorials/17109) [Diakses 16 Maret 2024]. 
+[3] Dicoding, 2024. Machine Learning Terapan | Sistem Rekomendasi. [Online]  Tersedia di: [https://www.dicoding.com/academies/319/tutorials/17109](https://www.dicoding.com/academies/319/tutorials/17109) [Diakses 16 Maret 2024]. 
 
-‌[4] K. C. Media, “Pengertian Film: Definisi, Jenis dan Fungsinya Halaman all,” KOMPAS.com, Oct. 19, 2022.[tautan](https://entertainment.kompas.com/read/2022/10/19/150302666/pengertian-film-definisi-jenis-dan-fungsinya?page=all).
+‌[4] K. C. Media, “Pengertian Film: Definisi, Jenis dan Fungsinya Halaman all,” KOMPAS.com, Oct. 19, 2022.[https://entertainment.kompas.com/read/2022/10/19/150302666/pengertian-film-definisi-jenis-dan-fungsinya?page=all](https://entertainment.kompas.com/read/2022/10/19/150302666/pengertian-film-definisi-jenis-dan-fungsinya?page=all).
 
