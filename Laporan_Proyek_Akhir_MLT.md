@@ -110,50 +110,50 @@ Setelah persiapan data selesai, langkah selanjutnya adalah pembuatan model, yang
 - Melakukan Vektorisasi dengan TF-IDF
 Pada tahap ini, data yang telah dipersiapkan dikonversi menjadi vektor menggunakan fungsi [tfidfvectorizer()](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) dari library sklearn. Proses ini bertujuan untuk mengidentifikasi korelasi antara judul film dengan kategori genre film.
 
-**Kelebihan**:
-- Mengatasi Masalah Dimensi: TF-IDF dapat mengurangi dimensi dataset dengan menghilangkan kata-kata umum yang tidak informatif.
-- Menangkap Bobot Kata: TF-IDF memberikan bobot yang lebih tinggi pada kata-kata yang jarang muncul tetapi penting, sehingga meningkatkan kemampuan model dalam membedakan antara dokumen.
-- Mudah diinterpretasikan: Hasil vektor TF-IDF relatif mudah diinterpretasikan, karena memberikan skor numerik yang menunjukkan tingkat pentingnya sebuah kata dalam dokumen.
-- Mengatasi Masalah Nilai Nol: TF-IDF menangani masalah nilai nol dengan baik, karena kata-kata yang tidak ada dalam dokumen akan memiliki nilai TF-IDF nol.
+ **Kelebihan**:
+ - Mengatasi Masalah Dimensi: TF-IDF dapat mengurangi dimensi dataset dengan menghilangkan kata-kata umum yang tidak informatif.
+ - Menangkap Bobot Kata: TF-IDF memberikan bobot yang lebih tinggi pada kata-kata yang jarang muncul tetapi penting, sehingga meningkatkan kemampuan model dalam membedakan antara dokumen.
+ - Mudah diinterpretasikan: Hasil vektor TF-IDF relatif mudah diinterpretasikan, karena memberikan skor numerik yang menunjukkan tingkat pentingnya sebuah kata dalam dokumen.
+ - Mengatasi Masalah Nilai Nol: TF-IDF menangani masalah nilai nol dengan baik, karena kata-kata yang tidak ada dalam dokumen akan memiliki nilai TF-IDF nol.
 
-**Kekurangan**:
-- Tidak Memperhatikan Urutan Kata: TF-IDF tidak memperhatikan urutan kata dalam dokumen, yang berarti informasi tentang struktur atau urutan kata dalam dokumen tidak dipertimbangkan.
-- Membutuhkan Banyak Data: Untuk hasil yang optimal, TF-IDF membutuhkan jumlah data yang cukup besar untuk memperoleh estimasi yang akurat tentang frekuensi kata-kata dalam dokumen.
-- Sensitif terhadap Stop Words: Penggunaan stop words yang berlebihan dapat mempengaruhi hasil vektorisasi TF-IDF, karena kata-kata tersebut dapat memiliki bobot yang signifikan tergantung pada frekuensinya dalam korpus.
-- Tidak Membedakan Makna: TF-IDF tidak membedakan makna kata yang sama tetapi digunakan dalam konteks yang berbeda. Misalnya, kata "batu" dapat merujuk pada benda fisik atau nama lokasi, tetapi TF-IDF mungkin memberikan bobot yang sama untuk kedua makna tersebut.
+ **Kekurangan**:
+ - Tidak Memperhatikan Urutan Kata: TF-IDF tidak memperhatikan urutan kata dalam dokumen, yang berarti informasi tentang struktur atau urutan kata dalam dokumen tidak dipertimbangkan.
+ - Membutuhkan Banyak Data: Untuk hasil yang optimal, TF-IDF membutuhkan jumlah data yang cukup besar untuk memperoleh estimasi yang akurat tentang frekuensi kata-kata dalam dokumen.
+ - Sensitif terhadap Stop Words: Penggunaan stop words yang berlebihan dapat mempengaruhi hasil vektorisasi TF-IDF, karena kata-kata tersebut dapat memiliki bobot yang signifikan tergantung pada frekuensinya dalam korpus.
+ - Tidak Membedakan Makna: TF-IDF tidak membedakan makna kata yang sama tetapi digunakan dalam konteks yang berbeda. Misalnya, kata "batu" dapat merujuk pada benda fisik atau nama lokasi, tetapi TF-IDF mungkin memberikan bobot yang sama untuk kedua makna tersebut.
 
 - Mengukur Tingkat Kesamaan dengan Cosine Similarity [Cosine Similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)
 Setelah data dikonversi menjadi vektor, langkah selanjutnya adalah mengukur tingkat kesamaan antara dua vektor menggunakan metode Cosine Similarity. Tujuan utamanya adalah untuk menentukan seberapa mirip dua vektor tersebut dengan melihat sudut kosinus antara keduanya. Semakin kecil sudut cosinus, semakin besar nilai cosine similarity.
 
-**Kelebihan**:
-- Mudah diimplementasikan: Cosine Similarity adalah metode yang relatif mudah diimplementasikan dan dipahami. Ini sering digunakan dalam berbagai aplikasi pengolahan bahasa alami dan pemrosesan teks.
-- Tidak Sensitif Terhadap Magnitudo: Cosine Similarity tidak sensitif terhadap magnitudo vektor, yang berarti ia fokus pada arah dari vektor, bukan pada besarnya. Ini berguna dalam kasus di mana magnitudo data tidak relevan, seperti dalam pemrosesan teks.
-- Berfungsi Baik pada Data Sparse: Cosine Similarity efektif bekerja dengan data sparse, seperti data teks, di mana matriks term-frekuensi jarang (TF-IDF) sering digunakan untuk merepresentasikan dokumen.
-- Mengatasi Masalah Dimensi: Cosine Similarity dapat digunakan untuk mengatasi masalah dimensi dalam analisis data yang memiliki fitur yang sangat banyak.
+ **Kelebihan**:
+ - Mudah diimplementasikan: Cosine Similarity adalah metode yang relatif mudah diimplementasikan dan dipahami. Ini sering digunakan dalam berbagai aplikasi pengolahan bahasa alami dan pemrosesan teks.
+ - Tidak Sensitif Terhadap Magnitudo: Cosine Similarity tidak sensitif terhadap magnitudo vektor, yang berarti ia fokus pada arah dari vektor, bukan pada besarnya. Ini berguna dalam kasus di mana magnitudo data tidak relevan, seperti dalam pemrosesan teks.
+ - Berfungsi Baik pada Data Sparse: Cosine Similarity efektif bekerja dengan data sparse, seperti data teks, di mana matriks term-frekuensi jarang (TF-IDF) sering digunakan untuk merepresentasikan dokumen.
+ - Mengatasi Masalah Dimensi: Cosine Similarity dapat digunakan untuk mengatasi masalah dimensi dalam analisis data yang memiliki fitur yang sangat banyak.
 
-**Kekurangan**:
-- Tidak Memperhitungkan Konteks: Cosine Similarity hanya memperhitungkan arah vektor dan tidak mempertimbangkan konteks atau makna dari data yang diukur. Ini dapat menyebabkan hasil yang tidak sesuai dalam beberapa kasus.
-- Tidak Cocok untuk Data dengan Bobot Penting: Jika beberapa fitur memiliki bobot yang penting dalam menentukan kesamaan antara data, Cosine Similarity mungkin tidak memberikan penekanan yang cukup pada fitur-fitur tersebut.
-- Sensitif terhadap Bobot: Cosine Similarity bisa menjadi sensitif terhadap perbedaan dalam bobot yang diberikan pada fitur-fitur data. Ini dapat mempengaruhi hasil kesamaan, terutama jika bobot tidak diberikan secara tepat.
-- Tidak Membedakan Antar-Kategori: Cosine Similarity tidak secara otomatis dapat membedakan antara kategori data yang berbeda. Ini berarti bahwa dalam beberapa kasus, data dari kategori yang berbeda dapat memiliki kesamaan kosinus yang tinggi, meskipun sebenarnya berbeda dalam makna atau konteksnya.
+ **Kekurangan**:
+ - Tidak Memperhitungkan Konteks: Cosine Similarity hanya memperhitungkan arah vektor dan tidak mempertimbangkan konteks atau makna dari data yang diukur. Ini dapat menyebabkan hasil yang tidak sesuai dalam beberapa kasus.
+ - Tidak Cocok untuk Data dengan Bobot Penting: Jika beberapa fitur memiliki bobot yang penting dalam menentukan kesamaan antara data, Cosine Similarity mungkin tidak memberikan penekanan yang cukup pada fitur-fitur tersebut.
+ - Sensitif terhadap Bobot: Cosine Similarity bisa menjadi sensitif terhadap perbedaan dalam bobot yang diberikan pada fitur-fitur data. Ini dapat mempengaruhi hasil kesamaan, terutama jika bobot tidak diberikan secara tepat.
+ - Tidak Membedakan Antar-Kategori: Cosine Similarity tidak secara otomatis dapat membedakan antara kategori data yang berbeda. Ini berarti bahwa dalam beberapa kasus, data dari kategori yang berbeda dapat memiliki kesamaan kosinus yang tinggi, meskipun sebenarnya berbeda dalam makna atau konteksnya.
 
 - Membuat Fungsi movie_recommendations()
-Tahap terakhir dari proses pemodelan adalah pembuatan fungsi untuk menghasilkan rekomendasi top-N. Fungsi ini disebut *movie_recommendations()*. Fungsi ini menggunakan teknik [argpartition](https://numpy.org/doc/stable/reference/generated/numpy.argpartition.html) untuk mengambil sejumlah nilai k tertinggi dari similarity data (dalam hal ini, dataframe cosine_sim_df). Data kemudian diurutkan dari nilai *similarity* tertinggi ke terendah, dan film yang sedang dicari [drop()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html) dihapus dari daftar rekomendasi agar tidak muncul kembali. Parameter fungsi *movie_recommendations()* adalah sebagai berikut:
+ Tahap terakhir dari proses pemodelan adalah pembuatan fungsi untuk menghasilkan rekomendasi top-N. Fungsi ini disebut *movie_recommendations()*. Fungsi ini menggunakan teknik [argpartition](https://numpy.org/doc/stable/reference/generated/numpy.argpartition.html) untuk mengambil sejumlah nilai k tertinggi dari similarity data (dalam hal ini, dataframe cosine_sim_df). Data kemudian diurutkan dari nilai *similarity* tertinggi ke terendah, dan film yang sedang dicari [drop()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html) dihapus dari daftar rekomendasi agar tidak muncul kembali. Parameter fungsi *movie_recommendations()* adalah sebagai berikut:
   - movie_title : Judul film (index kemiripan dataframe)(str)
   - similarity_data : Dataframe kesamaan simetris dengan judul film sebagai indeks dan kolom (object)
   - items : Mengandung nama dan fitur lain yang digunakan untuk mendefinisikan kemiripan (object)
   - k : Jumlah rekomendasi yang ingin diberikan(int)
     
-**Kelebihan**:
-- Kustomisasi Rekomendasi: Fungsi ini memungkinkan untuk membuat rekomendasi yang disesuaikan dengan preferensi pengguna atau kebutuhan bisnis tertentu, seperti menentukan jumlah rekomendasi yang diinginkan.
-- Mudah Digunakan: Dengan adanya fungsi ini, proses mendapatkan rekomendasi film menjadi lebih mudah dan efisien. Pengguna hanya perlu memasukkan judul film yang ingin dicari, dan fungsi akan menghasilkan rekomendasi yang sesuai.
-- Fleksibilitas: Fungsi ini dapat disesuaikan dengan berbagai jenis model rekomendasi dan metode pengukuran kesamaan, sehingga dapat digunakan dalam berbagai skenario dan kasus penggunaan.
+ **Kelebihan**:
+ - Kustomisasi Rekomendasi: Fungsi ini memungkinkan untuk membuat rekomendasi yang disesuaikan dengan preferensi pengguna atau kebutuhan bisnis tertentu, seperti menentukan jumlah rekomendasi yang diinginkan.
+ - Mudah Digunakan: Dengan adanya fungsi ini, proses mendapatkan rekomendasi film menjadi lebih mudah dan efisien. Pengguna hanya perlu memasukkan judul film yang ingin dicari, dan fungsi akan menghasilkan rekomendasi yang sesuai.
+ - Fleksibilitas: Fungsi ini dapat disesuaikan dengan berbagai jenis model rekomendasi dan metode pengukuran kesamaan, sehingga dapat digunakan dalam berbagai skenario dan kasus penggunaan.
 
-**Kekurangan**:
-- Ketergantungan pada Model: Kualitas rekomendasi dari fungsi ini sangat bergantung pada kualitas model rekomendasi yang digunakan. Jika model tidak akurat atau tidak sesuai dengan data, maka rekomendasi yang dihasilkan juga tidak akan akurat.
-- Kemungkinan Overfitting: Jika tidak hati-hati dalam pemilihan model atau parameter, ada risiko overfitting di mana model hanya cocok dengan data pelatihan tetapi tidak bisa melakukan generalisasi dengan baik pada data baru.
-- Keterbatasan dalam Pengukuran Kesamaan: Metode yang digunakan untuk mengukur kesamaan antara film-film mungkin tidak selalu sempurna atau mungkin tidak memperhitungkan semua faktor yang relevan dalam menentukan kesamaan.
-- Keterbatasan dalam Skala: Fungsi ini mungkin tidak optimal untuk digunakan pada skala besar dengan banyak pengguna dan film, karena dapat memakan waktu dan sumber daya yang signifikan untuk menghasilkan rekomendasi untuk setiap permintaan.
+ **Kekurangan**:
+ - Ketergantungan pada Model: Kualitas rekomendasi dari fungsi ini sangat bergantung pada kualitas model rekomendasi yang digunakan. Jika model tidak akurat atau tidak sesuai dengan data, maka rekomendasi yang dihasilkan juga tidak akan akurat.
+ - Kemungkinan Overfitting: Jika tidak hati-hati dalam pemilihan model atau parameter, ada risiko overfitting di mana model hanya cocok dengan data pelatihan tetapi tidak bisa melakukan generalisasi dengan baik pada data baru.
+ - Keterbatasan dalam Pengukuran Kesamaan: Metode yang digunakan untuk mengukur kesamaan antara film-film mungkin tidak selalu sempurna atau mungkin tidak memperhitungkan semua faktor yang relevan dalam menentukan kesamaan.
+ - Keterbatasan dalam Skala: Fungsi ini mungkin tidak optimal untuk digunakan pada skala besar dengan banyak pengguna dan film, karena dapat memakan waktu dan sumber daya yang signifikan untuk menghasilkan rekomendasi untuk setiap permintaan.
 
 
 ## Evaluation
