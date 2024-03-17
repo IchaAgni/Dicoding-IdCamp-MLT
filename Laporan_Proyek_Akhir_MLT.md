@@ -81,7 +81,9 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
  - **Movies**  
  ![unv-2](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/EDA-Movies.png)  
  Gambar 3. Distribusi fitur genre
+
  Dari hasil visualisasi pada Gambar 3 dapat disimpulkan bahwa:
+
  Sebagian besar sampel film dari dataset movies ber-genre *drama* dan *comedy*, hal tersebut menunjukkan bahwa film yang tersedia lebih banyak ber-genre  _drama_  dan  _comedy_.  
    
  - **Rating**
