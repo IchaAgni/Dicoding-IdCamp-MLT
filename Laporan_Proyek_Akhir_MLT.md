@@ -50,7 +50,6 @@ Berikut merupakan informasi dari dataset yang digunakan:
 |          Lisensi        | [GPL 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) |
 | Jenis dan Ukuran Berkas | zip (846KB) |   
 
-Tabel 1. Informasi Dataset  
 Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 
 ### Deskripsi Variabel
@@ -64,12 +63,11 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 | 2  |  genres  | 2731 non-null   | object | 
 
 Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
+   - *movieId*: id film
+   - *title*: Judul film
+   - *genres*: genre film  
 
- 	- *movieId*: id film
-        - *title*: Judul film
-        - *genres*: genre film  
-
- - **ratings.csv**
+- **ratings.csv**
    
 |  # |  Column   |  Non-Null Count |  Dtype  |
 |----|-----------|-----------------|---------|
