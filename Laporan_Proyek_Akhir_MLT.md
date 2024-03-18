@@ -39,6 +39,8 @@ Untuk menjawab permasalahan di atas, maka akan goals/tujuan yang akan dicapai ya
 * Metode yang digunakan pada projek ini adalah Content Based Filtering. Content Based Filtering adalah Content-based filtering adalah metode yang digunakan dalam sistem rekomendasi dan analisis data yang berfokus pada karakteristik atau konten dari item-item yang ingin direkomendasikan atau dianalisis. Pendekatan ini menggunakan atribut-atribut atau fitur-fitur item untuk menentukan kesamaan antara item yang ada dan preferensi pengguna.Dalam konteks rekomendasi, content-based filtering berusaha untuk merekomendasikan item yang mirip dengan item yang telah disukai oleh pengguna berdasarkan karakteristik konten.
 
  ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/cbf.png?raw=true)
+
+ Gambar 1. Content Based Filtering
  
 ## Data Understanding
 Berikut merupakan informasi dari dataset yang digunakan:
@@ -54,7 +56,7 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 
 ### Deskripsi Variabel
 
- - **movies.csv**
+**1. movies.csv**
 
 |  # |  Column  |  Non-Null Count |  Dtype |
 |----|----------|-----------------|--------|
@@ -62,13 +64,12 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 | 1  |  tittle  | 2731 non-null   | object | 
 | 2  |  genres  | 2731 non-null   | object | 
 
+Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
+- *movieId*: id film
+- *title*: Judul film
+- *genres*: genre film 
 
-  Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
-	 - *movieId*: id film
-	 - *title*: Judul film
-	 - *genres*: genre film 
-
-- **ratings.csv**
+**2. ratings.csv**
    
 |  # |  Column   |  Non-Null Count |  Dtype  |
 |----|-----------|-----------------|---------|
@@ -87,16 +88,16 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 
  - **Movies**  
  ![unv-2](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/EDA-Movies.png?raw=true)  
- Gambar 3. Distribusi fitur genre
+ Gambar 2. Distribusi fitur genre
 
- Dari hasil visualisasi pada Gambar 3 dapat disimpulkan bahwa:
-
+ Dari hasil visualisasi pada Gambar 2 dapat disimpulkan bahwa:
  Sebagian besar sampel film dari dataset movies ber-genre *drama* dan *comedy*, hal tersebut menunjukkan bahwa film yang tersedia lebih banyak ber-genre  _drama_  dan  _comedy_.  
    
  - **Rating**
  ![unv-3](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/EDA-Rating.png?raw=true)    
- Gambar 4. Visualisasi fitur numerik rating  
-   Dari hasil visualisasi pada gambar 4 dapat disimpulkan bahwa:  
+ Gambar 3. Visualisasi fitur numerik rating
+ 
+   Dari hasil visualisasi pada Gambar 3 dapat disimpulkan bahwa:  
    - Rentang rating film adalah 0,5 hingga 5
    - Jumlah sampel terbanyak adalah film yang memiliki rating 4, hal ini menunjukkan bahwa banyak user yang menilai film dengan nilai 4.
 
