@@ -8,9 +8,9 @@ Trend yang sama terjadi dalam industri film. Menurut British Film Institute (BFI
 
 Oleh karena itu, diperlukan sebuah sistem yang dapat membantu menyaring informasi dan memberikan rekomendasi yang sesuai dengan preferensi pengguna. Sistem ini sering disebut sebagai sistem rekomendasi. Frank Kane, salah satu pionir Sistem Rekomendasi dalam course Building Recommender Systems with Machine Learning and AI, mendefinisikan sistem rekomendasi sebagai berikut.
 
-*“A system that predicts ratings or preferences a user might give to a product. Often these are sorted and presented as “top-N'' recommendations. Also known as recommender engines, recommendation systems, and recommendation platforms”* [[2]](https://www.dicoding.com/academies/319/corridor)
+*“A system that predicts ratings or preferences a user might give to a product. Often these are sorted and presented as “top-N'' recommendations. Also known as recommender engines, recommendation systems, and recommendation platforms”* [[2]](https://www.dicoding.com/academies/319/corridor).
 
-Sistem rekomendasi memprediksi rating atau preferensi pengguna terhadap item tertentu. Rekomendasi ini dibuat berdasarkan perilaku pengguna di masa lalu atau perilaku pengguna lainnya. Jadi, sistem ini akan merekomendasikan sesuatu terhadap pengguna berdasarkan data perilaku atau preferensi dari waktu ke waktu[[3]](https://www.dicoding.com/academies/319/tutorials/17109)
+Sistem rekomendasi memprediksi rating atau preferensi pengguna terhadap item tertentu. Rekomendasi ini dibuat berdasarkan perilaku pengguna di masa lalu atau perilaku pengguna lainnya. Jadi, sistem ini akan merekomendasikan sesuatu terhadap pengguna berdasarkan data perilaku atau preferensi dari waktu ke waktu[[3]](https://www.dicoding.com/academies/319/tutorials/17109).
 Pada proyek ini untuk mendapatkan hasil rekomendasi menggunakan algoritma content based filtering dengan mencari kemiripan bobot dari term pada hasil pre-processing judul film dan rating film. Pembobotan dilakukan menggunakan metode TF-IDF yang telah dinormalisasi. Kemudian hasil pembobotan akan melalui tahap cosine similarity untuk mencari kemiripan berdasarkan bobot dan diakhiri dengan filtering berdasarkan genre. 
 
 ## Business Understanding
@@ -199,11 +199,7 @@ Film *Baby Geniuses (1999)* merupakan film dengan genre Comedy.  Selanjutnya lih
 
 ### Result  
 
-Karena proyek ini menggunakan model Content-Based Filtering, metrik yang paling cocok untuk evaluasi adalah Precision. Secara matematis, rumusnya dapat dinyatakan sebagai berikut:
-
-![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/prescion.jpg)
-
-Berdasarkan hasil yang tercantum dalam Tabel 3 pada bagian Result, dapat disimpulkan bahwa dari 10 judul film yang direkomendasikan, semua film dianggap relevan. Oleh karena itu, nilai Precision dari model ini adalah 100%.
+Karena proyek ini menggunakan model Content-Based Filtering, metrik yang paling cocok untuk evaluasi adalah Precision. Berdasarkan hasil yang tercantum dalam Tabel 3 pada bagian Result, dapat disimpulkan bahwa dari 10 judul film yang direkomendasikan, semua film dianggap relevan. Oleh karena itu, nilai Precision dari model ini adalah 100%.
 
 ### Conclusion
 Setelah melalui serangkaian proses yang komprehensif, mulai dari pengolahan dataset hingga evaluasi model, sistem rekomendasi menggunakan pendekatan Machine Learning Content-Based Filtering berhasil dibangun. Hasilnya memuaskan, di mana dari 10 judul film yang direkomendasikan, semua dianggap relevan dengan judul film yang diuji. Hal ini menunjukkan bahwa precision dari model ini mencapai 100%. Diharapkan implementasi sistem rekomendasi ini dapat membantu pengguna untuk menemukan berdasarkan genre film-film yang paling mirip dengan film yang telah ditonton sebelumnya dan dijadikan rekomendasi film yang akan ditonton selanjutnya. 
