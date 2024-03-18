@@ -190,13 +190,15 @@ Pada proyek ini, Metric yang digunakan pada sistem rekomendasi judul film berdas
 
 $$\ Precission=TP/(TP+FP)$$
 
-Keterangan:
-TP = True Positif (prediksi positif dan hal tersebut benar)
-FP = False Positif (prediksi positif dan hal tersebut salah)
+Keterangan :
+
+	TP = True Positif (prediksi positif dan hal tersebut benar)
+ 
+	FP = False Positif (prediksi positif dan hal tersebut salah)
 
 Berbeda dengan di modelling disini saya mengevaluasi dengan mencoba menampilkan 19 rekomendasi film dari judul yang telah di input yaitu Below (2002) genre horror, menggunakan fungsi movie_recomendations. Alasan accuracy Precision dipilih adalah karena metrik ini dapat membandingkan rasio prediksi benar atau positif dengan keseluruhan hasil yang diprediksi positif. Dalam hal ini adalah rasio item yang direkomendasikan memiliki genre yang mirip atau serupa dibandingkan dengan genre dari judul film yang diinput.
 
-Code yang digunakan untuk melihat jumlah genre yang mirip atau serupa yaitu dengan menggunakan value_counts().
+Fungsi yang digunakan untuk melihat jumlah genre yang mirip atau serupa yaitu dengan menggunakan value_counts().
 
 Output:
 
