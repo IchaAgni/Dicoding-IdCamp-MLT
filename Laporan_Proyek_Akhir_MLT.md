@@ -180,27 +180,47 @@ Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi,
  - Keterbatasan dalam Pengukuran Kesamaan: Metode yang digunakan untuk mengukur kesamaan antara film-film mungkin tidak selalu sempurna atau mungkin tidak memperhitungkan semua faktor yang relevan dalam menentukan kesamaan.
  - Keterbatasan dalam Skala: Fungsi ini mungkin tidak optimal untuk digunakan pada skala besar dengan banyak pengguna dan film, karena dapat memakan waktu dan sumber daya yang signifikan untuk menghasilkan rekomendasi untuk setiap permintaan.
 
+# Evaluation
+---
+Pada proyek ini, Metric yang digunakan pada sistem rekomendasi judul film berdasarkan genre adalah accuracy precision. Precision adalah metrik yang membandingkan rasio prediksi benar atau positif dengan keseluruhan hasil yang diprediksi positif dengan rumus
 
-## Evaluation
+$$\ Precission=TP/(TP+FP)$$
+~~~
+keterangan:
+TP = True Positif (prediksi positif dan hal tersebut benar)
+FP = False Positif (prediksi positif dan hal tersebut salah)
+~~~
+Berbeda dengan di modelling disini saya mengevaluasi dengan mencoba menampilkan 19 rekomendasi film dari judul yang telah di input yaitu Below (2002) genre horror menggunakan fungsi movie_recomendations. Alasan accuracy Precision dipilih adalah karena metrik ini dapat membandingkan rasio prediksi benar atau positif dengan keseluruhan hasil yang diprediksi positif. Dalam hal ini adalah rasio item yang direkomendasikan memiliki genre yang mirip atau serupa dibandingkan dengan genre dari judul film yang diinput.
 
-Hasil evaluasi untuk Content Based Filtering
+Code yang digunakan untuk melihat jumlah genre yang mirip atau serupa adalah sebagai berikut.
+~~~
+# menghitung banyaknya data genre pada hasil rekomendasi yg dilakukan 
+value = pd.DataFrame(recomendation['genre'].value_counts().reset_index().values, columns = ['genre', 'count'])
+value.head()
+~~~
+Output:
+~~~
+genre	count
+0	Horror	19
+~~~
+Dari output tersebut dihitung accuracy precision nya adalah
+```
+TP = 19 #jumlah prediksi benar untuk genre yang mirip atau serupa
+FP = 0 #jumlah prediksi salah untuk genre yang mirip atau serupa
 
-
-Sebagai contoh mengggunakan judul film *Baby Geniuses (1999)* untuk menguji model.
-
-![reccomend](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/assets/98201578/0024877c-1e20-4162-a269-c2fb7f5a10d5.jpg)
-
-Film *Baby Geniuses (1999)* merupakan film dengan genre Comedy.  Selanjutnya lihat rekomendasi film yang sesuai dengan genre yang sama dengan film tersebut.  
-
-![reccom2](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/assets/98201578/af6485eb-6808-49d1-abcd-1a8e05b68d8a.jpg)
-  
- Teknik Evaluasi di atas adalah dengan menggunakan precission, rumus dari teknik ini adalah :
-
-![prescion](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/assets/98201578/309d9a40-71fe-48e8-8f48-bf92032449ce.jpg)
+Precision = TP/(TP+FP)
+print("{0:.0%}".format(Precision))
+```
+Dipilih nya nilai True Positif 19 karna ia merupakan nilai atau jumlah yg diduga memiliki kemiripan/identik dengan genre yg dipilih yaitu 19. Hasil rekomendasi yg dihasilkan model menunjukan kemiripan dengan genre film yg dinput yaitu Horror. sedangkan utk nilai False Positif tidak teridentifikasi pada hasil output dari genre yg diinput maka nilai nya 0 
+Output:
+```
+100%
+```
+Kesimpulan dari output yang dihasilkan bahwa prediksi rekomendasi yang diberikan 100% presisi sesuai genre yang mirip atau serupa dengan genre dari judul yang diinput.
 
 ### Result  
 
-Karena proyek ini menggunakan model Content-Based Filtering, metrik yang paling cocok untuk evaluasi adalah Precision. Berdasarkan hasil yang tercantum dalam Tabel 3 pada bagian Result, dapat disimpulkan bahwa dari 10 judul film yang direkomendasikan, semua film dianggap relevan. Oleh karena itu, nilai Precision dari model ini adalah 100%.
+Karena proyek ini menggunakan model Content-Based Filtering, metrik yang paling cocok untuk evaluasi adalah Precision. Berdasarkan hasil evalauasi. Oleh karena itu, nilai Precision dari model ini adalah 100%.
 
 ### Conclusion
 Setelah melalui serangkaian proses yang komprehensif, mulai dari pengolahan dataset hingga evaluasi model, sistem rekomendasi menggunakan pendekatan Machine Learning Content-Based Filtering berhasil dibangun. Hasilnya memuaskan, di mana dari 10 judul film yang direkomendasikan, semua dianggap relevan dengan judul film yang diuji. Hal ini menunjukkan bahwa precision dari model ini mencapai 100%. Diharapkan implementasi sistem rekomendasi ini dapat membantu pengguna untuk menemukan berdasarkan genre film-film yang paling mirip dengan film yang telah ditonton sebelumnya dan dijadikan rekomendasi film yang akan ditonton selanjutnya. 
