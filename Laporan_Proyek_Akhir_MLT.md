@@ -6,7 +6,7 @@ Dengan kemajuan teknologi, jumlah informasi yang tersedia semakin meningkat. Pro
 
 Trend yang sama terjadi dalam industri film. Menurut British Film Institute (BFI), jumlah film box office yang diproduksi terus meningkat dari tahun 2009 hingga 2015. Pada tahun 2009, ada 503 film yang diproduksi, sementara pada tahun 2015, jumlahnya meningkat menjadi 759 film. Karena jumlah film yang tersedia begitu banyak, sering kali penonton merasa kebingungan dalam memilih film yang ingin ditonton di internet[[1]](http://eprints.undip.ac.id/60611/1/laporan_24010312130054_1.pdf).
 
-Oleh karena itu, diperlukan sebuah sistem yang dapat membantu menyaring informasi dan memberikan rekomendasi yang sesuai dengan preferensi pengguna. Sistem ini sering disebut sebagai sistem rekomendasi. Frank Kane, salah satu pionir Sistem Rekomendasi dalam course Building Recommender Systems with Machine Learning and AI, mendefinisikan sistem rekomendasi sebagai berikut.
+Oleh karena itu, diperlukan sebuah sistem yang dapat membantu menyaring informasi dan memberikan rekomendasi yang sesuai dengan preferensi pengguna. Sistem ini sering disebut sebagai sistem rekomendasi. Frank Kane, salah satu pionir Sistem Rekomendasi dalam course Building Recommender Systems with Machine Learning and AI, mendefinisikan sistem rekomendasi sebagai berikut :
 
 *“A system that predicts ratings or preferences a user might give to a product. Often these are sorted and presented as “top-N'' recommendations. Also known as recommender engines, recommendation systems, and recommendation platforms”* [[2]](https://www.dicoding.com/academies/319/corridor).
 
