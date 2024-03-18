@@ -62,11 +62,11 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 | 1  |  tittle  | 2731 non-null   | object | 
 | 2  |  genres  | 2731 non-null   | object | 
 
-Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
 
-     - *movieId*: id film
-     - *title*: Judul film
-     - *genres*: genre film  
+  Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
+	 - *movieId*: id film
+	 - *title*: Judul film
+	 - *genres*: genre film 
 
 - **ratings.csv**
    
