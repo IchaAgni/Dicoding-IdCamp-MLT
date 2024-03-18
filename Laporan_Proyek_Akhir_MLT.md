@@ -216,11 +216,9 @@ Output:
 ```
 100%
 ```
-Kesimpulan dari output yang dihasilkan bahwa prediksi rekomendasi yang diberikan 100% presisi sesuai genre yang mirip atau serupa dengan genre dari judul yang diinput.
 
 ### Result  
-
-Karena proyek ini menggunakan model Content-Based Filtering, metrik yang paling cocok untuk evaluasi adalah Precision. Berdasarkan hasil evalauasi. Oleh karena itu, nilai Precision dari model ini adalah 100%.
+Karena proyek ini menggunakan model Content-Based Filtering, metrik yang paling cocok untuk evaluasi adalah Precision. Berdasarkan hasil evalauasi, output yang dihasilkan bahwa prediksi rekomendasi yang diberikan 100% presisi sesuai genre yang mirip atau serupa dengan genre dari judul yang diinput. Oleh karena itu, nilai Precision dari model ini adalah 100%.
 
 ### Conclusion
 Setelah melalui serangkaian proses yang komprehensif, mulai dari pengolahan dataset hingga evaluasi model, sistem rekomendasi menggunakan pendekatan Machine Learning Content-Based Filtering berhasil dibangun. Hasilnya memuaskan, di mana dari 10 judul film yang direkomendasikan, semua dianggap relevan dengan judul film yang diuji. Hal ini menunjukkan bahwa precision dari model ini mencapai 100%. Diharapkan implementasi sistem rekomendasi ini dapat membantu pengguna untuk menemukan berdasarkan genre film-film yang paling mirip dengan film yang telah ditonton sebelumnya dan dijadikan rekomendasi film yang akan ditonton selanjutnya. 
