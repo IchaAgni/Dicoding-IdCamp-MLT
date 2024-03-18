@@ -57,7 +57,7 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 
  - **movies.csv**
    
-![movies](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/assets/98201578/6180570f-d3ca-4af4-9fdc-403c3e6a33fe.jpg) 
+![movies](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/rating.JPG ) 
  
  Gambar 1. Informasi variabel movies  
   Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
