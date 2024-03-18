@@ -204,21 +204,8 @@ Output:
 |---|---------|-------|
 | 0 |  Horror |  19   | 
 
-Dari output tersebut dihitung accuracy precision nya adalah
-```
-TP = 19 #jumlah prediksi benar untuk genre yang mirip atau serupa
-FP = 0 #jumlah prediksi salah untuk genre yang mirip atau serupa
-
-Precision = TP/(TP+FP)
-print("{0:.0%}".format(Precision))
-```
-Dipilih nya nilai True Positif 19 karna ia merupakan nilai atau jumlah yg diduga memiliki kemiripan/identik dengan genre yg dipilih yaitu 19. Hasil rekomendasi yg dihasilkan model menunjukan kemiripan dengan genre film yg dinput yaitu Horror. sedangkan utk nilai False Positif tidak teridentifikasi pada hasil output dari genre yg diinput maka nilai nya 0.
-
-Output:
-```
-100%
-```
-
+Dipilih nya nilai True Positif 19 karna ia merupakan nilai atau jumlah yg diduga memiliki kemiripan/identik dengan genre yg dipilih yaitu 19. Hasil rekomendasi yg dihasilkan model menunjukan kemiripan dengan genre film yg dinput yaitu Horror. Sedangkan utk nilai False Positif tidak teridentifikasi pada hasil output dari genre yg diinput maka nilai nya 0. Setelah dihitung menggunakan rumus precision menghasilkan presisi sebesar 100%.
+ 
 ### Result  
 Karena proyek ini menggunakan model Content-Based Filtering, metrik yang paling cocok untuk evaluasi adalah Precision. Berdasarkan hasil evalauasi, output yang dihasilkan bahwa prediksi rekomendasi yang diberikan 100% presisi sesuai genre yang mirip atau serupa dengan genre dari judul yang diinput. Oleh karena itu, nilai Precision dari model ini adalah 100%.
 
