@@ -212,7 +212,8 @@ FP = 0 #jumlah prediksi salah untuk genre yang mirip atau serupa
 Precision = TP/(TP+FP)
 print("{0:.0%}".format(Precision))
 ```
-Dipilih nya nilai True Positif 19 karna ia merupakan nilai atau jumlah yg diduga memiliki kemiripan/identik dengan genre yg dipilih yaitu 19. Hasil rekomendasi yg dihasilkan model menunjukan kemiripan dengan genre film yg dinput yaitu Horror. sedangkan utk nilai False Positif tidak teridentifikasi pada hasil output dari genre yg diinput maka nilai nya 0 
+Dipilih nya nilai True Positif 19 karna ia merupakan nilai atau jumlah yg diduga memiliki kemiripan/identik dengan genre yg dipilih yaitu 19. Hasil rekomendasi yg dihasilkan model menunjukan kemiripan dengan genre film yg dinput yaitu Horror. sedangkan utk nilai False Positif tidak teridentifikasi pada hasil output dari genre yg diinput maka nilai nya 0.
+
 Output:
 ```
 100%
