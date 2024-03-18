@@ -57,7 +57,8 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 
  - **movies.csv**
    
-![movies](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/rating.JPG ) 
+![movies](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/assets/98201578/7168e784-2252-43e2-af2e-5a7a7cf8f98d.jpg)
+
  
  Gambar 1. Informasi variabel movies  
   Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
@@ -67,7 +68,8 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 
  - **ratings.csv**
    
- ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/rating.JPG )  
+ ![rating](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/assets/98201578/45e86e1f-b62e-46e5-bdb9-f9e3c3685b89.jpg)
+
  
  Gambar 2. Informasi variabel ratings    
  Variabel-variabel yang terdapat pada file ratings.csv adalah sebagai berikut:  
@@ -179,32 +181,21 @@ Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi,
 
 
 ## Evaluation
-Setelah model selesai dibuat, panggil model untuk menampilkan hasil rekomendasi, sebagai contoh gunakan judul film *Baby Geniuses (1999)* untuk menguji model.  
 
-|    |   id   |      movie_title     |   genre   |
-|----|--------|----------------------|-----------|
-|548 |  2555  | Baby Geniuses (1999) |  Comedy   |  
+Hasil evaluasi untuk Content Based Filtering
 
-Tabel 2. Informasi judul film uji  
- 
-Dapat terlihat pada Tabel 2 bahwa film *Baby Geniuses (1999)* merupakan film dengan genre Comedy.  Selanjutnya lihat rekomendasi film yang sesuai dengan genre yang sama dengan film tersebut.  
 
-| | movie_title  |   genre   |
-|-|--------------|-----------|
-|0| Andrew Dice Clay: Dice Rules (1991) | Comedy | 
-|1| Hawks and Sparrows (Uccellacci e Uccellini) (1... | Comedy | 
-|2| American Wedding (American Pie 3) (2003) | Comedy | 
-|3| Uptown Girls (2003) | Comedy | 
-|4| Start the Revolution Without Me (1970) | Comedy | 
-|5| Legally Blonde 2: Red, White & Blonde (2003) | Comedy | 
-|6| What's Up, Doc? (1972) | Comedy | 
-|7| Kiss Me, Stupid (1964) | Comedy | 
-|8| One, Two, Three (1961) | Comedy | 
-|9| It's Pat (1994) | Comedy |    
+Sebagai contoh mengggunakan judul film *Baby Geniuses (1999)* untuk menguji model.
 
-Tabel 3. Hasil rekomendasi   
+![reccomend](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/assets/98201578/0024877c-1e20-4162-a269-c2fb7f5a10d5.jpg)
 
-Seperti terlihat pada Tabel 3, model berhasil menampilkan rekomendasi film berdasarkan genrenya. 
+Film *Baby Geniuses (1999)* merupakan film dengan genre Comedy.  Selanjutnya lihat rekomendasi film yang sesuai dengan genre yang sama dengan film tersebut.  
+
+![reccom2](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/assets/98201578/af6485eb-6808-49d1-abcd-1a8e05b68d8a.jpg)
+  
+ Teknik Evaluasi di atas adalah dengan menggunakan precission, rumus dari teknik ini adalah :
+
+![prescion](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/assets/98201578/309d9a40-71fe-48e8-8f48-bf92032449ce.jpg)
 
 ### Result  
 
