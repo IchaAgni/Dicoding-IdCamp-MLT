@@ -190,7 +190,7 @@ keterangan:
 TP = True Positif (prediksi positif dan hal tersebut benar)
 FP = False Positif (prediksi positif dan hal tersebut salah)
 ~~~
-Berbeda dengan di modelling disini saya mengevaluasi dengan mencoba menampilkan 19 rekomendasi film dari judul yang telah di input yaitu Below (2002) genre horror menggunakan fungsi movie_recomendations. Alasan accuracy Precision dipilih adalah karena metrik ini dapat membandingkan rasio prediksi benar atau positif dengan keseluruhan hasil yang diprediksi positif. Dalam hal ini adalah rasio item yang direkomendasikan memiliki genre yang mirip atau serupa dibandingkan dengan genre dari judul film yang diinput.
+Berbeda dengan di modelling disini saya mengevaluasi dengan mencoba menampilkan 19 rekomendasi film dari judul yang telah di input yaitu Below (2002) genre horror, menggunakan fungsi movie_recomendations. Alasan accuracy Precision dipilih adalah karena metrik ini dapat membandingkan rasio prediksi benar atau positif dengan keseluruhan hasil yang diprediksi positif. Dalam hal ini adalah rasio item yang direkomendasikan memiliki genre yang mirip atau serupa dibandingkan dengan genre dari judul film yang diinput.
 
 Code yang digunakan untuk melihat jumlah genre yang mirip atau serupa adalah sebagai berikut.
 ~~~
@@ -199,10 +199,11 @@ value = pd.DataFrame(recomendation['genre'].value_counts().reset_index().values,
 value.head()
 ~~~
 Output:
-~~~
-genre	count
-0	Horror	19
-~~~
+
+|   |  genre  | count |  
+|---|---------|-------|
+| 0 |  Horror |  19   | 
+
 Dari output tersebut dihitung accuracy precision nya adalah
 ```
 TP = 19 #jumlah prediksi benar untuk genre yang mirip atau serupa
