@@ -38,7 +38,7 @@ Untuk menjawab permasalahan di atas, maka akan goals/tujuan yang akan dicapai ya
     * Mengonversi data series menjadi bentuk list
 * Metode yang digunakan pada projek ini adalah Content Based Filtering. Content Based Filtering adalah Content-based filtering adalah metode yang digunakan dalam sistem rekomendasi dan analisis data yang berfokus pada karakteristik atau konten dari item-item yang ingin direkomendasikan atau dianalisis. Pendekatan ini menggunakan atribut-atribut atau fitur-fitur item untuk menentukan kesamaan antara item yang ada dan preferensi pengguna.Dalam konteks rekomendasi, content-based filtering berusaha untuk merekomendasikan item yang mirip dengan item yang telah disukai oleh pengguna berdasarkan karakteristik konten.
 
- ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/cbf.png)
+ ![image](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/cbf.png?raw=true)
  
 ## Data Understanding
 Berikut merupakan informasi dari dataset yang digunakan:
@@ -56,23 +56,27 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 ### Deskripsi Variabel
 
  - **movies.csv**
-   
-![movies](https://i.ibb.co/GCzPgtb/movies.jpg)
 
+|  # |  Column  |  Non-Null Count |  Dtype |
+|----|----------|-----------------|--------|
+| 0  |  movieId | 2731 non-null   | int64  | 
+| 1  |  tittle  | 2731 non-null   | object | 
+| 2  |  genres  | 2731 non-null   | object | 
 
- 
- Gambar 1. Informasi variabel movies  
-  Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
+Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
 	 - *movieId*: id film
 	 - *title*: Judul film
 	 - *genres*: genre film  
 
  - **ratings.csv**
    
- ![rating](https://i.ibb.co/KhJvkDG/rating.jpg)
+|  # |  Column   |  Non-Null Count |  Dtype  |
+|----|-----------|-----------------|---------|
+| 0  |   userId  | 2731 non-null   | int64   | 
+| 1  |  movieId  | 2731 non-null   | int64   | 
+| 2  |  rating   | 2731 non-null   | float64 |
+| 2  | timestamp | 2731 non-null   | int64   |
 
- 
- Gambar 2. Informasi variabel ratings    
  Variabel-variabel yang terdapat pada file ratings.csv adalah sebagai berikut:  
    - *userId*: id user
    - *movieId*: id film
@@ -82,7 +86,7 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
   ### Exploratory Data Analysis - Univariate Analysis
 
  - **Movies**  
- ![unv-2](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/EDA-Movies.png)  
+ ![unv-2](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/EDA-Movies.png?raw=true)  
  Gambar 3. Distribusi fitur genre
 
  Dari hasil visualisasi pada Gambar 3 dapat disimpulkan bahwa:
@@ -90,7 +94,7 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
  Sebagian besar sampel film dari dataset movies ber-genre *drama* dan *comedy*, hal tersebut menunjukkan bahwa film yang tersedia lebih banyak ber-genre  _drama_  dan  _comedy_.  
    
  - **Rating**
- ![unv-3](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/EDA-Rating.png)    
+ ![unv-3](https://github.com/IchaAgni/Dicoding-IdCamp-MLT/blob/main/img/EDA-Rating.png?raw=true)    
  Gambar 4. Visualisasi fitur numerik rating  
    Dari hasil visualisasi pada gambar 4 dapat disimpulkan bahwa:  
    - Rentang rating film adalah 0,5 hingga 5
@@ -192,12 +196,8 @@ FP = False Positif (prediksi positif dan hal tersebut salah)
 ~~~
 Berbeda dengan di modelling disini saya mengevaluasi dengan mencoba menampilkan 19 rekomendasi film dari judul yang telah di input yaitu Below (2002) genre horror, menggunakan fungsi movie_recomendations. Alasan accuracy Precision dipilih adalah karena metrik ini dapat membandingkan rasio prediksi benar atau positif dengan keseluruhan hasil yang diprediksi positif. Dalam hal ini adalah rasio item yang direkomendasikan memiliki genre yang mirip atau serupa dibandingkan dengan genre dari judul film yang diinput.
 
-Code yang digunakan untuk melihat jumlah genre yang mirip atau serupa adalah sebagai berikut.
-~~~
-# menghitung banyaknya data genre pada hasil rekomendasi yg dilakukan 
-value = pd.DataFrame(recomendation['genre'].value_counts().reset_index().values, columns = ['genre', 'count'])
-value.head()
-~~~
+Code yang digunakan untuk melihat jumlah genre yang mirip atau serupa yaitu dengan menggunakan value_counts().
+
 Output:
 
 |   |  genre  | count |  
